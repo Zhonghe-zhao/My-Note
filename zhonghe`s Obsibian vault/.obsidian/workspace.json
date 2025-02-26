@@ -1,0 +1,269 @@
+{
+  "main": {
+    "id": "c3eb92e5d059fe60",
+    "type": "split",
+    "children": [
+      {
+        "id": "6794be33bc2f5f2d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f4f0663ba29a43f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "我的日记/2.25 服务器集群.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2.25 服务器集群"
+            }
+          },
+          {
+            "id": "d10e82b27b16fb63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "我的日记/夯实基础计划.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "夯实基础计划"
+            }
+          },
+          {
+            "id": "e16b32c6aaa82eb7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/计算机组成原理.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "计算机组成原理"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fbf0b669ced830d2",
+    "type": "split",
+    "children": [
+      {
+        "id": "86686ab35255a08f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86b4cf62ad685d9f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "9e41f5f5b8b9a099",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#网络配置",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "148e44bcafee47a9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "26a0615cfcdf78f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d7b0e9c4cdb6587",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6d7f81022406461",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "1ab1fb25d3b256ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "02e5c5133f1ee651",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "ba5aa224a13384cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "我的日记/2.25 服务器集群.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2.25 服务器集群 的大纲"
+            }
+          },
+          {
+            "id": "fc08a94f0584ae9f",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_nodes",
+              "state": {},
+              "icon": "ag-node-list",
+              "title": "Juggl nodes"
+            }
+          },
+          {
+            "id": "81b4e99e116008b7",
+            "type": "leaf",
+            "state": {
+              "type": "juggl_style",
+              "state": {},
+              "icon": "ag-style",
+              "title": "Juggl style"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
+      "publish:发布更改": false,
+      "juggl:Juggl global graph": false
+    }
+  },
+  "active": "7f4f0663ba29a43f",
+  "lastOpenFiles": [
+    "我的日记/csapp 计算机基础.md",
+    "我的日记/字节青训营.md",
+    "我的日记/Go面试.md",
+    "我的日记/知识点.md",
+    "我的日记/Kratos的目录层级.md",
+    "我的日记/技术学习.md",
+    "我的日记/结构体与接口.md",
+    "我的日记/夯实基础计划.md",
+    "我的日记/后端学习路线.md",
+    "我的日记/绘制cpu流水线流程图.md",
+    "我的日记/etcd学习.md",
+    "我的日记/github_token验证推送仓库.md",
+    "我的日记/Go错误处理.md",
+    "我的日记/gRPCvsREST.md",
+    "我的日记/Kratos.md",
+    "我的日记/My github homepage.md",
+    "我的日记/Go异步编程.md",
+    "我的日记/Deep seek微服务推荐.md",
+    "我的日记/api与rpc.md",
+    "我的日记/源码建议.md",
+    "我的日记/项目.md",
+    "我的日记/微服务.md",
+    "我的日记/链接本地仓库.md",
+    "我的日记/开源项目贡献.md",
+    "我的日记/第四个学期.md",
+    "我的日记/单片机知识.md",
+    "计算机/计算机联系.canvas",
+    "项目图片/修改配置38行.png",
+    "项目图片/问题.png",
+    "项目图片/输出人类友好日志.png",
+    "项目图片/环境变量.png",
+    "项目图片/配置中心.png",
+    "项目图片/配置中心2.png",
+    "项目图片/kratos_run.png",
+    "项目图片/simplebank8.png",
+    "微服务图片存储/架构2.png",
+    "微服务图片存储/架构1.png",
+    "微服务图片存储",
+    "项目图片",
+    "后端",
+    "大模型",
+    "未命名 1",
+    "未命名/未命名",
+    "python",
+    "模电/模电.canvas",
+    "Dance_Go",
+    "7days_golang",
+    "study_photo"
+  ]
+}
