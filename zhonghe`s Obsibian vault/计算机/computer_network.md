@@ -117,7 +117,7 @@ Web FTP Telent 电子邮箱
 
 **端口号**： 众所周知的端口号列表： http://www.iana.org
 
-![image-20241107112953295](/study_photo/internet2.jpg)
+![image-20241107112953295](internet2Pasted%20image%2020250226142819.jpg)
 
 #### 2.1.3 可供应用程序使用的运输服务
 

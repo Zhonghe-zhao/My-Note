@@ -11,14 +11,10 @@
             "id": "7f4f0663ba29a43f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/2.25 服务器集群.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2.25 服务器集群"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           },
           {
@@ -41,15 +37,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机/计算机组成原理.md",
+                "file": "我的日记/6.s081.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "计算机组成原理"
+              "title": "6.s081"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -166,13 +163,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/2.25 服务器集群.md",
+                "file": "我的日记/6.s081.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.25 服务器集群 的大纲"
+              "title": "6.s081 的大纲"
             }
           },
           {
@@ -215,8 +212,24 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "7f4f0663ba29a43f",
+  "active": "e16b32c6aaa82eb7",
   "lastOpenFiles": [
+    "计算机/计算机组成原理.md",
+    "我的日记/夯实基础计划.md",
+    "我的日记/6.s081.md",
+    "计算机/computer_operate.md",
+    "Pasted image 20250226143032.png",
+    "计算机图片存放/冯诺依曼.png",
+    "study_photo/internet2Pasted image 20250226142819.jpg",
+    "study_photo/internet3.jpg",
+    "study_photo/Pasted image 20250226142819.png",
+    "未命名",
+    "study_photo/internet.jpg",
+    "study_photo/img_11.png",
+    "计算机/computer_network.md",
+    "计算机/数据库.md",
+    "Go_demo/项目路线.md",
+    "我的日记/2.25 服务器集群.md",
     "我的日记/csapp 计算机基础.md",
     "我的日记/字节青训营.md",
     "我的日记/Go面试.md",
@@ -224,7 +237,6 @@
     "我的日记/Kratos的目录层级.md",
     "我的日记/技术学习.md",
     "我的日记/结构体与接口.md",
-    "我的日记/夯实基础计划.md",
     "我的日记/后端学习路线.md",
     "我的日记/绘制cpu流水线流程图.md",
     "我的日记/etcd学习.md",
@@ -236,24 +248,10 @@
     "我的日记/Go异步编程.md",
     "我的日记/Deep seek微服务推荐.md",
     "我的日记/api与rpc.md",
-    "我的日记/源码建议.md",
-    "我的日记/项目.md",
-    "我的日记/微服务.md",
-    "我的日记/链接本地仓库.md",
-    "我的日记/开源项目贡献.md",
-    "我的日记/第四个学期.md",
-    "我的日记/单片机知识.md",
     "计算机/计算机联系.canvas",
     "项目图片/修改配置38行.png",
     "项目图片/问题.png",
     "项目图片/输出人类友好日志.png",
-    "项目图片/环境变量.png",
-    "项目图片/配置中心.png",
-    "项目图片/配置中心2.png",
-    "项目图片/kratos_run.png",
-    "项目图片/simplebank8.png",
-    "微服务图片存储/架构2.png",
-    "微服务图片存储/架构1.png",
     "微服务图片存储",
     "项目图片",
     "后端",
@@ -263,7 +261,6 @@
     "python",
     "模电/模电.canvas",
     "Dance_Go",
-    "7days_golang",
-    "study_photo"
+    "7days_golang"
   ]
 }
