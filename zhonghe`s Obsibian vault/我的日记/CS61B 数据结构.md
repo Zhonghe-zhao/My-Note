@@ -7,3 +7,26 @@
 [课程](https://sp24.datastructur.es/)
 
 
+## 配置在wsl中java环境
+
+`sudo apt install openjdk-11-jdk`
+
+`sudo nano /etc/environment`
+
+add: 
+~~~
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+PATH=$PATH:$JAVA_HOME/bin
+~~~
+
+~~~
+source /etc/environment
+~~~
+
+编译：
+`javac HelloWorld.java
+`
+执行：
+
+`java HelloWorld
+`

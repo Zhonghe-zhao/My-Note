@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/夯实基础计划.md",
+                "file": "我的日记/6.s081.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "夯实基础计划"
+              "title": "6.s081"
             }
           },
           {
@@ -37,16 +37,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/6.s081.md",
+                "file": "我的日记/第四个学期.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.s081"
+              "title": "第四个学期"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -212,11 +212,21 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "e16b32c6aaa82eb7",
+  "active": "d10e82b27b16fb63",
   "lastOpenFiles": [
-    "计算机/计算机组成原理.md",
-    "我的日记/夯实基础计划.md",
+    "我的日记/CS61B 数据结构.md",
+    "我的日记/第四个学期.md",
+    "我的日记/github_token验证推送仓库.md",
     "我的日记/6.s081.md",
+    "我的日记/6.824 分布式.md",
+    "我的日记/夯实基础计划.md",
+    "我的日记/2.25 服务器集群.md",
+    "我的日记/源码建议.md",
+    "我的日记/知识点.md",
+    "我的日记/etcd学习.md",
+    "我的日记/结构体与接口.md",
+    "我的日记/对于我迄今迷茫的解答.md",
+    "计算机/计算机组成原理.md",
     "计算机/computer_operate.md",
     "Pasted image 20250226143032.png",
     "计算机图片存放/冯诺依曼.png",
@@ -229,25 +239,15 @@
     "计算机/computer_network.md",
     "计算机/数据库.md",
     "Go_demo/项目路线.md",
-    "我的日记/2.25 服务器集群.md",
     "我的日记/csapp 计算机基础.md",
     "我的日记/字节青训营.md",
     "我的日记/Go面试.md",
-    "我的日记/知识点.md",
     "我的日记/Kratos的目录层级.md",
     "我的日记/技术学习.md",
-    "我的日记/结构体与接口.md",
     "我的日记/后端学习路线.md",
     "我的日记/绘制cpu流水线流程图.md",
-    "我的日记/etcd学习.md",
-    "我的日记/github_token验证推送仓库.md",
     "我的日记/Go错误处理.md",
     "我的日记/gRPCvsREST.md",
-    "我的日记/Kratos.md",
-    "我的日记/My github homepage.md",
-    "我的日记/Go异步编程.md",
-    "我的日记/Deep seek微服务推荐.md",
-    "我的日记/api与rpc.md",
     "计算机/计算机联系.canvas",
     "项目图片/修改配置38行.png",
     "项目图片/问题.png",
