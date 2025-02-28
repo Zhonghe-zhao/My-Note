@@ -29,4 +29,11 @@ source /etc/environment
 执行：
 
 `java HelloWorld
-`
+
+java的执行过程：
+
+![[java工作流.png]]
+
+
+... 了解了java的一些语法
+
