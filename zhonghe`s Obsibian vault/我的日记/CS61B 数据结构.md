@@ -8,6 +8,8 @@
 
 [课程](https://sp24.datastructur.es/)
 
+[gradescope](https://www.gradescope.com/courses/137626/assignments/1473073/submissions/315627984)
+
 
 ## 配置在wsl中java环境
 
@@ -102,4 +104,11 @@ public class windowPosSum {
 ---
 
 **NOTE：**`==` 与 `String`s 的行为很奇怪，原因我们将在本课程后面看到。您应该在 Java 中使用 `s1.equals（s2）` 检查字符串 `s1` 和 `s2` 是否相等。
+
+
+---
+
+调好了CS61B的环境配置，并且添加了自己的仓库
+
+`git push -u Whuichenggong main` 把lab01更改推送到我github的仓库
 

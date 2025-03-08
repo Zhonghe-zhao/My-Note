@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/6.s081.md",
+                "file": "我的日记/CS61B 数据结构.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.s081"
+              "title": "CS61B 数据结构"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#网络配置",
+                "query": "tag:#数据库事务",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,6 +89,21 @@
         "type": "tabs",
         "children": [
           {
+            "id": "ba5aa224a13384cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "我的日记/CS61B 数据结构.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "CS61B 数据结构 的大纲"
+            }
+          },
+          {
             "id": "c6d7f81022406461",
             "type": "leaf",
             "state": {
@@ -112,39 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "我的日记/CS61B 数据结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
-            }
-          },
-          {
-            "id": "02e5c5133f1ee651",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "标签"
-            }
-          },
-          {
-            "id": "ba5aa224a13384cc",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "我的日记/6.s081.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "6.s081 的大纲"
+              "title": "CS61B 数据结构 的出链列表"
             }
           },
           {
@@ -158,6 +146,21 @@
             }
           },
           {
+            "id": "02e5c5133f1ee651",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
             "id": "81b4e99e116008b7",
             "type": "leaf",
             "state": {
@@ -167,12 +170,11 @@
               "title": "Juggl style"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 260.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,12 +189,12 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "b7ae17668eaf0313",
+  "active": "86b4cf62ad685d9f",
   "lastOpenFiles": [
-    "我的日记/6.824 分布式.md",
-    "MIT图片存放/重定向.png",
-    "我的日记/CS61B 数据结构.md",
     "我的日记/6.s081.md",
+    "我的日记/6.824 分布式.md",
+    "我的日记/CS61B 数据结构.md",
+    "MIT图片存放/重定向.png",
     "Go_demo/Simple_bank.md",
     "我的日记/对于我迄今迷茫的解答.md",
     "我的日记/第四个学期.md",
