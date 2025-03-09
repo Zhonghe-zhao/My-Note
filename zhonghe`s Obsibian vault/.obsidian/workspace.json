@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/CS61B 数据结构.md",
+                "file": "Go_demo/Simple_bank.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CS61B 数据结构"
+              "title": "Simple_bank"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "26a0615cfcdf78f6",
@@ -94,13 +95,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/CS61B 数据结构.md",
+                "file": "Go_demo/Simple_bank.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CS61B 数据结构 的大纲"
+              "title": "Simple_bank 的大纲"
             }
           },
           {
@@ -189,10 +190,14 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "86b4cf62ad685d9f",
+  "active": "b7ae17668eaf0313",
   "lastOpenFiles": [
     "我的日记/6.s081.md",
     "我的日记/6.824 分布式.md",
+    "MIT图片存放/页表.png",
+    "我的日记/单片机知识.md",
+    "MIT图片存放/地址映射.png",
+    "MIT图片存放/虚拟内存地址.png",
     "我的日记/CS61B 数据结构.md",
     "MIT图片存放/重定向.png",
     "Go_demo/Simple_bank.md",
@@ -213,9 +218,6 @@
     "计算机图片存放/冯诺依曼.png",
     "study_photo/internet2Pasted image 20250226142819.jpg",
     "study_photo/internet3.jpg",
-    "study_photo/Pasted image 20250226142819.png",
-    "study_photo/internet.jpg",
-    "study_photo/img_11.png",
     "计算机/computer_network.md",
     "计算机/数据库.md",
     "Go_demo/项目路线.md",
@@ -225,9 +227,7 @@
     "我的日记/Kratos的目录层级.md",
     "我的日记/技术学习.md",
     "我的日记/后端学习路线.md",
-    "我的日记/绘制cpu流水线流程图.md",
     "计算机/计算机联系.canvas",
-    "项目图片/修改配置38行.png",
     "微服务图片存储",
     "项目图片",
     "后端",
