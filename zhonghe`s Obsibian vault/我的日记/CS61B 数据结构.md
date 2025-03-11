@@ -112,3 +112,8 @@ public class windowPosSum {
 
 `git push -u Whuichenggong main` 把lab01更改推送到我github的仓库
 
+---
+
+#### lab 2：
+
+学会调试， 通过理解代码 找出正确的代码并且传入
