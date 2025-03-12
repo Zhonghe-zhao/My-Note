@@ -7789,4 +7789,17 @@ const (
 
 还可以自定义日志
 
+---
+
+
+### 发送邮件 with Go
+
+`smtp` 包
+`gomail` 包 API易于使用！ 但是长时间没有被维护了
+`jordan-wright/email` 包
+
+
+使用Google的*App password* 功能
+
+`vhon ejxv umyj vttq` 生成的密码
 

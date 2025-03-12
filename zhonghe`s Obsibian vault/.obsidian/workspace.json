@@ -11,6 +11,18 @@
             "id": "b7ae17668eaf0313",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/java工作流.png"
+              },
+              "icon": "lucide-image",
+              "title": "java工作流"
+            }
+          },
+          {
+            "id": "23bd8e86bfacc0f1",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "我的日记/6.s081.md",
@@ -20,8 +32,35 @@
               "icon": "lucide-file",
               "title": "6.s081"
             }
+          },
+          {
+            "id": "4fa9a915c34100a4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/总体路线.png"
+              },
+              "icon": "lucide-image",
+              "title": "总体路线"
+            }
+          },
+          {
+            "id": "d5e7a5555de51517",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "我的日记/CS144：计算机网络.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CS144：计算机网络"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -94,13 +133,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/6.s081.md",
+                "file": "我的日记/CS144：计算机网络.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "6.s081 的大纲"
+              "title": "CS144：计算机网络 的大纲"
             }
           },
           {
@@ -189,26 +228,28 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "86b4cf62ad685d9f",
+  "active": "d5e7a5555de51517",
   "lastOpenFiles": [
-    "我的日记/CS61B 数据结构.md",
+    "MIT图片存放/总体路线.png",
     "我的日记/6.s081.md",
+    "我的日记/CS144：计算机网络.md",
+    "MIT图片存放/java工作流.png",
+    "MIT图片存放/NAT.png",
+    "MIT图片存放/地址映射.png",
+    "MIT图片存放/传输.png",
+    "MIT图片存放/数据报传输.png",
+    "MIT图片存放/中继服务器.png",
+    "Pasted image 20250312205414.png",
+    "Pasted image 20250312205407.png",
+    "我的日记/绘制cpu流水线流程图.md",
+    "Go_demo/Simple_bank.md",
+    "我的日记/CS61B 数据结构.md",
     "MIT图片存放/视图查看.png",
-    "MIT图片存放/Ubuntu gdb调试.png",
     "我的日记/xv6的困惑.md",
-    "MIT图片存放/gdb调试.png",
     "python/拉取仓库api生成表格.md",
     "大模型/大模型.md",
-    "计算机图片存放/自旋锁.png",
-    "计算机图片存放/网络属性.png",
-    "计算机图片存放/时间片轮转调度.png",
-    "计算机图片存放/互斥锁.png",
-    "计算机图片存放/冯诺依曼.png",
-    "Go_demo/Simple_bank.md",
     "我的日记/6.824 分布式.md",
-    "MIT图片存放/页表.png",
     "我的日记/单片机知识.md",
-    "MIT图片存放/地址映射.png",
     "我的日记/对于我迄今迷茫的解答.md",
     "我的日记/第四个学期.md",
     "MIT图片存放",
@@ -225,8 +266,6 @@
     "计算机/数据库.md",
     "Go_demo/项目路线.md",
     "我的日记/csapp 计算机基础.md",
-    "我的日记/字节青训营.md",
-    "我的日记/Go面试.md",
     "计算机/计算机联系.canvas",
     "微服务图片存储",
     "项目图片",
