@@ -8,19 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b7ae17668eaf0313",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/java工作流.png"
-              },
-              "icon": "lucide-image",
-              "title": "java工作流"
-            }
-          },
-          {
-            "id": "23bd8e86bfacc0f1",
+            "id": "a364823f7a82ea4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,19 +22,7 @@
             }
           },
           {
-            "id": "4fa9a915c34100a4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/总体路线.png"
-              },
-              "icon": "lucide-image",
-              "title": "总体路线"
-            }
-          },
-          {
-            "id": "d5e7a5555de51517",
+            "id": "7105ba134e7133cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -60,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,7 +189,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 260.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,27 +205,27 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "d5e7a5555de51517",
+  "active": "7105ba134e7133cc",
   "lastOpenFiles": [
-    "MIT图片存放/总体路线.png",
-    "我的日记/6.s081.md",
+    "MIT图片存放/telnet.png",
     "我的日记/CS144：计算机网络.md",
+    "MIT图片存放/ipv4.png",
+    "我的日记/6.s081.md",
+    "MIT图片存放/IP Model.png",
+    "我的日记/6.824 分布式.md",
+    "study_photo/47.png",
+    "MIT图片存放/cpu从内存读取数据过程.png",
+    "study_photo/27.png",
+    "study_photo/23.png",
+    "MIT图片存放/ip server is so simple.png",
+    "MIT图片存放/总体路线.png",
     "MIT图片存放/java工作流.png",
-    "MIT图片存放/NAT.png",
-    "MIT图片存放/地址映射.png",
-    "MIT图片存放/传输.png",
-    "MIT图片存放/数据报传输.png",
-    "MIT图片存放/中继服务器.png",
-    "Pasted image 20250312205414.png",
-    "Pasted image 20250312205407.png",
     "我的日记/绘制cpu流水线流程图.md",
     "Go_demo/Simple_bank.md",
     "我的日记/CS61B 数据结构.md",
-    "MIT图片存放/视图查看.png",
     "我的日记/xv6的困惑.md",
     "python/拉取仓库api生成表格.md",
     "大模型/大模型.md",
-    "我的日记/6.824 分布式.md",
     "我的日记/单片机知识.md",
     "我的日记/对于我迄今迷茫的解答.md",
     "我的日记/第四个学期.md",
