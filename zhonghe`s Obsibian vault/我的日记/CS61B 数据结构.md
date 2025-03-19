@@ -117,3 +117,46 @@ public class windowPosSum {
 #### lab 2：
 
 学会调试， 通过理解代码 找出正确的代码并且传入
+
+#### lab3：
+
+堆栈跟踪： 堆栈跟踪中的第一行是发生错误的位置： 也就是发生错误前的最后一个方法！来确定bug的位置
+
+调试测试代码： 点击蓝色文件  
+
+##### 第一阶段问题所在：
+
+你提到 `this.input.add(input)` 抛出异常，原因是 `this.input` 是 `null`。这意味着 `this.input` 没有被正确初始化。以下是对问题的详细分析和解决方法：
+
+---
+
+##### 问题分析
+
+1. **`this.input` 是 `null`**：
+    
+    - 在 Java 中，如果一个对象是 `null`，调用它的方法（如 `add`）会抛出 `NullPointerException`。
+        
+    - 在你的代码中，`this.input` 是一个 `List<String>` 类型的成员变量，但它没有被初始化。
+        
+2. **为什么 `this.input` 是 `null`**：
+    
+    - 在 `BeeCountingStage` 类的构造函数中，没有对 `this.input` 进行初始化。
+        
+    - 例如：
+    - 
+        public BeeCountingStage(In in) {
+            this.in = in;
+            this.responses = Map.of("go", new SpeciesListStage(in));
+            // this.input 没有被初始化
+        }
+        
+    - 如果没有显式初始化 `this.input`，它的默认值是 `null`。
+        
+3. **`input` 是 `3`，但 `this.input` 仍然是 `null`**：
+    
+    - `input` 是局部变量，它的值与 `this.input` 无关。
+        
+    - 即使 `input` 有值，`this.input` 仍然是 `null`，因为它没有被初始化。
+
+数据索引问题 解决第一阶段！
+
