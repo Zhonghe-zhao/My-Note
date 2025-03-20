@@ -39,14 +39,12 @@
             "id": "527c8246e66a2159",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "我的日记/CS61B 数据结构.md",
-                "mode": "source",
-                "source": false
+                "file": "6.s081笔记/6_s081.pdf"
               },
-              "icon": "lucide-file",
-              "title": "CS61B 数据结构"
+              "icon": "lucide-file-text",
+              "title": "6_s081"
             }
           }
         ],
@@ -123,13 +121,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/CS61B 数据结构.md",
+                "file": "6.s081笔记/6_s081.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CS61B 数据结构 的大纲"
+              "title": "6_s081 的大纲"
             }
           },
           {
@@ -220,11 +218,13 @@
   },
   "active": "527c8246e66a2159",
   "lastOpenFiles": [
+    "我的日记/CS61B 数据结构.md",
+    "6.s081笔记/6_s081.pdf",
+    "6.s081笔记",
     "我的日记/CMU 15-445 数据库.md",
     "MIT图片存放/四个邻居中的最大.png",
     "MIT图片存放/正常逻辑.png",
     "我的日记/你可以做的事有很多.md",
-    "我的日记/CS61B 数据结构.md",
     "我的日记/CS144：计算机网络.md",
     "我的日记/csapp 计算机基础.md",
     "我的日记/你的灯还亮着吗.md",
@@ -264,8 +264,6 @@
     "未命名 1",
     "未命名/未命名",
     "python",
-    "模电/模电.canvas",
-    "Dance_Go",
-    "7days_golang"
+    "模电/模电.canvas"
   ]
 }
