@@ -1173,3 +1173,66 @@ func maxDepth(root *TreeNode) int {
 每个函数调用相当于“记住”当前节点的状态，等待左右子树的深度计算完成后，才计算当前节点的深度并返回。
 
 递归的返回值 自然累加 深度的方式，不需要额外的变量来显式记录深度。
+
+
+#### 49.字母异位词分组
+
+**输入:** strs = `["eat", "tea", "tan", "ate", "nat", "bat"]`
+**输出:** [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+思路： 
+1. 为每个单词实施排序 使单词从小到大
+2. 将排序的单词存入到数据结构中
+3. 将每一个单词和数据结构中的单词比较 如果 相同 则分为一组 
+
+```go
+func groupAnagrams(strs []string) [][]string {
+
+    m := map[string][]string{} //map的用法！
+
+    for _, s := range strs {
+
+        t := []byte(s)
+
+        slices.Sort(t)
+
+        sortedS := string(t)
+
+        m[sortedS] = append(m[sortedS], s) // sortedS 相同的字符串分到同一组
+
+    }
+
+    return slices.Collect(maps.Values(m))
+
+}
+```
+
+标准解法：
+
+对字符串的操作不熟练！，见到字符串有些发懵
+
+在 Go 中，字符串是不可变的，而字节切片是可变的
+
+##### map的用法
+```go
+m := map[string][]string{}
+```
+
+##### string操作示例：
+
+```go
+s := "hello"
+t := []byte(s)  // t = [104 101 108 108 111]
+```
+
+- `slices.Sort` 是 Go 1.21 引入的一个泛型函数，用于对切片进行排序'
+- `maps.Values` 是 Go 1.21 引入的一个泛型函数，用于从一个映射（`map`）中提取所有的值。
+- 它接受一个映射 `m` 作为参数，并返回一个包含所有值的切片。
+
+**`append(m[sortedS], s)` 的作用**
+
+- `append` 函数用于将 `s` 添加到 `m[sortedS]` 的末尾。
+    
+- 如果 `m[sortedS]` 不存在（即 `sortedS` 是第一次出现），`m[sortedS]` 会返回一个空的切片（`nil`），然后 `append` 会创建一个新的切片并将 `s` 添加进去。
+    
+- 如果 `m[sortedS]` 已经存在，`append` 会将 `s` 追加到已有的切片中。
