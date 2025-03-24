@@ -5724,7 +5724,11 @@ HTTP2：
 
 
 
-gRPC 网关： 
+#### gRPC 网关： 
+
+只编写一次服务器代码 满足grpc and http json 
+
+
 
 
 使用protobuf 定义gRPC API

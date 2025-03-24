@@ -1236,3 +1236,28 @@ t := []byte(s)  // t = [104 101 108 108 111]
 - 如果 `m[sortedS]` 不存在（即 `sortedS` 是第一次出现），`m[sortedS]` 会返回一个空的切片（`nil`），然后 `append` 会创建一个新的切片并将 `s` 添加进去。
     
 - 如果 `m[sortedS]` 已经存在，`append` 会将 `s` 追加到已有的切片中。
+
+
+这个方法好厉害！
+
+```go
+func groupAnagrams(strs []string) [][]string {
+    m := make(map[[26]int][]string)
+    for _, v := range strs {
+        cnt := [26]int{}
+        for _, c := range v {
+            cnt[c-'a']++
+        }
+        m[cnt] = append(m[cnt], v)
+    }
+
+    ans := make([][]string, 0, len(strs))
+    for _, v := range m {
+        ans = append(ans, v)
+    }
+    return ans
+}
+```
+
+`ans := make([][]string, 0, len(strs))`   - 预分配容量的空切片
+
