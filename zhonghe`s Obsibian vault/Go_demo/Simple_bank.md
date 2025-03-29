@@ -7807,3 +7807,92 @@ const (
 
 `vhon ejxv umyj vttq` 生成的密码
 
+`ctrl + F2 ` 替换一个单词为另一个
+
+
+### email verify API
+
+编写proto 
+
+通过id 和 密码 查找验证电子邮件
+
+学会查看官方示例使用：
+
+[grpc官方代码使用](https://github.com/grpc/grpc-go/tree/master/examples/features/error_details/client)
+
+
+### 为grpc编写测试代码
+
+*理解Go中的一些高级语法！*
+
+回调函数 闭包等
+
+
+**metadata一般用在项目中的什么地方 起到什么作用 如何获取metadata**
+
+`lib/pq` -> pgx
+
+
+docker 清理
+```go
+**# 清理构建缓存
+docker builder prune -af
+
+# 清理未使用的镜像
+docker image prune -a
+
+# 重新运行
+docker compose up --build**
+```
+
+数据库服务卷
+
+在Dockerfile中
+
+添加`COPY --from=build /app/db/migration ./db/migration` 这个就完美的启动了容器
+
+```Dockerfile
+# Build stage
+
+FROM golang:1.23-alpine3.20 AS build
+
+WORKDIR /app
+
+COPY . .
+
+RUN go build -o main main.go
+
+RUN apk add curl
+
+RUN curl -L  https://github.com/golang-migrate/migrate/releases/download/v4.17.0/migrate.linux-amd64.tar.gz | tar xvz && mv migrate /app/migrate
+
+  
+
+# Run stage
+
+FROM alpine:3.20
+
+WORKDIR /app
+
+COPY --from=build /app/main .
+
+COPY --from=build /app/migrate /app/migrate
+
+COPY --from=build /app/db/migration ./db/migration
+
+COPY app.env .
+
+COPY start.sh .
+
+COPY wait-for.sh .
+
+COPY db/migration ./db/migration
+
+  
+
+EXPOSE 8080
+
+CMD [ "/app/main" ]
+
+ENTRYPOINT [ "/app/start.sh" ]
+```

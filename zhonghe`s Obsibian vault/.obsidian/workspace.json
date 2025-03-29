@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/关于虚拟地址的一些名词.md",
+                "file": "我的日记/关于页表等的理解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "关于虚拟地址的一些名词"
+              "title": "关于页表等的理解"
             }
           },
           {
@@ -48,9 +48,37 @@
               "icon": "lucide-file",
               "title": "6.s081"
             }
+          },
+          {
+            "id": "d88f4155f6498331",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "我的日记/近期计划.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "近期计划"
+            }
+          },
+          {
+            "id": "db4077dc2a72177e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Go_demo/Simple_bank.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Simple_bank"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/6.s081.md",
+                "file": "我的日记/近期计划.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "6.s081 的大纲"
+              "title": "近期计划 的大纲"
             }
           },
           {
@@ -199,7 +227,8 @@
               "title": "Juggl style"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -218,11 +247,13 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "d396495137e375d7",
+  "active": "d88f4155f6498331",
   "lastOpenFiles": [
-    "我的日记/关于虚拟地址的一些名词.md",
-    "我的日记/CS144：计算机网络.md",
     "我的日记/6.s081.md",
+    "Go_demo/Simple_bank.md",
+    "我的日记/近期计划.md",
+    "我的日记/关于页表等的理解.md",
+    "我的日记/CS144：计算机网络.md",
     "6.s081笔记/6_s081(2).pdf",
     "计算机/computer_operate.md",
     "计算机/computer_network.md",
@@ -231,7 +262,6 @@
     "计算机/计算机组成原理.md",
     "MIT图片存放/页&页表&PTE.png",
     "我的日记/单片机知识.md",
-    "Go_demo/Simple_bank.md",
     "我的日记/2025.3.23 周总结.md",
     "我的日记/Go与stm32单片机交互.md",
     "我的日记/CMU 15-445 数据库.md",
@@ -259,7 +289,6 @@
     "我的日记/xv6的困惑.md",
     "python/拉取仓库api生成表格.md",
     "大模型/大模型.md",
-    "我的日记/对于我迄今迷茫的解答.md",
     "MIT图片存放",
     "微服务图片存储",
     "项目图片",
