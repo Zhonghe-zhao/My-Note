@@ -1261,3 +1261,144 @@ func groupAnagrams(strs []string) [][]string {
 
 `ans := make([][]string, 0, len(strs))`   - 预分配容量的空切片
 
+
+
+#### 19 删除链表的倒数第N个节点
+
+```go
+/**
+
+ * Definition for singly-linked list.
+
+ * type ListNode struct {
+
+ *     Val int
+
+ *     Next *ListNode
+
+ * }
+
+ */
+
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+
+    length := 0
+
+    cur := head
+
+    for cur != nil {
+
+        length ++
+
+        cur = cur.Next
+
+    }
+
+  
+
+    if n == length {
+
+        return head.Next
+
+    }
+
+  
+
+    number := length - n
+
+  
+
+    prev := head
+
+    for i := 0; i < number - 1; i++ {
+
+        prev = prev.Next
+
+    }
+
+    prev.Next = prev.Next.Next
+
+  
+
+ return head
+
+}
+```
+
+思路 根据倒数 推到整数
+
+我觉得很直白但是肯定不是最佳做法
+
+写的时候边界条件忘记了
+
+
+#### 两数相加
+
+```go
+/**
+
+ * Definition for singly-linked list.
+
+ * type ListNode struct {
+
+ *     Val int
+
+ *     Next *ListNode
+
+ * }
+
+ */
+
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+
+    l3 := &ListNode{}
+
+    carry := 0
+
+    cur := l3
+
+    for l1 != nil || l2 != nil || carry != 0 {
+
+        s := carry
+
+        if l1 != nil {
+
+            s += l1.Val
+
+        }
+
+        if l2 != nil {
+
+            s += l2.Val
+
+        }
+
+        carry = s / 10
+
+        cur.Next = &ListNode{Val: s % 10,Next: nil }
+
+        cur = cur.Next
+
+        if l1 != nil {
+
+            l1 = l1.Next
+
+    }
+
+        if l2 != nil {
+
+            l2 = l2.Next
+
+        }
+
+}
+
+return l3.Next
+
+}
+```
+
+
+借鉴的代码 有思路 但是写不出来 尤其是 `for l1 != nil || l2 != nil || carry != 0`
+
+

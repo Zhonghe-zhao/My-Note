@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深入理解GO/go_tool_trace.go.md",
+                "file": "cmu15445/project0.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "go_tool_trace.go"
+              "title": "project0"
             }
           }
         ]
@@ -94,13 +94,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "深入理解GO/go_tool_trace.go.md",
+                "file": "cmu15445/project0.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "go_tool_trace.go 的大纲"
+              "title": "project0 的大纲"
             }
           },
           {
@@ -191,13 +191,17 @@
   },
   "active": "da997c5571b77448",
   "lastOpenFiles": [
-    "我的日记/近期计划.md",
+    "我的日记/CMU 15-445 数据库.md",
+    "cmu15445/project0.md",
+    "6.s081笔记/关键代码.md",
+    "cmu15445",
+    "leetcode/leet-code.md",
     "深入理解GO/go_tool_trace.go.md",
+    "我的日记/近期计划.md",
     "深入理解GO",
     "我的日记/突然觉得看清好多.md",
     "MIT图片存放/kvmmap.png",
     "MIT图片存放/计算pte.png",
-    "6.s081笔记/关键代码.md",
     "MIT图片存放/gdb调试.png",
     "我的日记/关于页表等的理解.md",
     "我的日记/6.s081.md",
@@ -212,9 +216,7 @@
     "我的日记/单片机知识.md",
     "我的日记/2025.3.23 周总结.md",
     "我的日记/Go与stm32单片机交互.md",
-    "我的日记/CMU 15-445 数据库.md",
     "MIT图片存放/Trie Tree.png",
-    "leetcode/leet-code.md",
     "MIT图片存放/JavaVisual.png",
     "我的日记/CS61B 数据结构.md",
     "Pasted image 20250322171044.png",
@@ -231,13 +233,11 @@
     "计算机/计算机联系.canvas",
     "我的日记/6.824 分布式.md",
     "我的日记/绘制cpu流水线流程图.md",
-    "我的日记/xv6的困惑.md",
     "MIT图片存放",
     "微服务图片存储",
     "项目图片",
     "后端",
     "大模型",
-    "未命名 1",
     "模电/模电.canvas"
   ]
 }
