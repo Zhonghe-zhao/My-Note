@@ -1402,3 +1402,72 @@ return l3.Next
 借鉴的代码 有思路 但是写不出来 尤其是 `for l1 != nil || l2 != nil || carry != 0`
 
 
+
+
+---
+
+2025.4.6
+
+### 560 和为k的子数组
+
+```go
+func subarraySum(nums []int, k int) int {
+
+    count := 0
+
+    preSum := 0
+
+    hash := map[int]int{0:1}
+
+  
+
+    for i := 0; i < len(nums); i++{
+
+        preSum += nums[i]
+
+  
+
+        if (hash[preSum - k] > 0) {
+
+            count += hash[preSum - k]
+
+    }
+
+    hash[preSum] ++
+
+  
+
+}
+
+return  count
+
+}
+```
+
+前缀和＋哈希表
+
+看代码还是可以理解的但是还是想不到
+
+暴力求和
+
+```go
+func subarraySum(nums []int, k int) int {
+    Sumlength := 0
+for i := 0; i< len(nums); i++ {
+   currentSum := nums[i]
+    if currentSum == k {
+        Sumlength ++
+    } 
+for j := i + 1; j < len(nums); j ++ {
+    currentSum += nums[j]
+    if  currentSum == k {
+        Sumlength ++
+    }
+}
+}
+return Sumlength
+}
+```
+
+很慢 并且第一次写的时候并没有处理好逻辑 对于break 和 continue的使用有点乱了！
+
