@@ -1471,3 +1471,82 @@ return Sumlength
 
 很慢 并且第一次写的时候并没有处理好逻辑 对于break 和 continue的使用有点乱了！
 
+
+
+### 230.二叉搜索树
+
+
+~~~
+二叉搜索树（BST，Binary Search Tree），也称[二叉排序树]或二叉查找树。  
+二叉搜索树：一棵二叉树，可以为空；如果不为空，满足以下性质：
+
+1. 非空左子树的所有键值小于其根结点的键值。
+2. 非空右子树的所有键值大于其根结点的键值。
+3. 左、右子树都是二叉搜索树。
+
+~~~
+
+
+#### 理解二叉树的前中后序遍历的作用： 
+
+中序可以将二叉树从小到大排序
+
+
+#### 理解GO中的闭包性质
+
+函数字面量（匿名函数)是_闭包_：它们可以引用在周围函数中定义的变量。然后，这些变量在周围的函数和函数字面量之间共享，只要它们还可以访问，它们就会继续存在。
+
+闭包 = 函数 + 引用环境
+
+
+```go
+/**
+
+ * Definition for a binary tree node.
+
+ * type TreeNode struct {
+
+ *     Val int
+
+ *     Left *TreeNode
+
+ *     Right *TreeNode
+
+ * }
+
+ */
+
+func kthSmallest(root *TreeNode, k int) (ans int) {
+
+    var dfs func(*TreeNode)
+
+    dfs = func (node *TreeNode){
+
+        if node == nil {
+
+        return
+
+    }
+
+    dfs(node.Left)
+
+    k --
+
+    if k == 0 {
+
+    ans = node.Val
+
+    return
+
+    }
+
+    dfs(node.Right)
+
+    }
+
+    dfs(root)
+
+    return
+
+}
+```
