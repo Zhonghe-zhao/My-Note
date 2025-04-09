@@ -8,7 +8,55 @@
         "type": "tabs",
         "children": [
           {
-            "id": "da997c5571b77448",
+            "id": "7c21984711e4d4a2",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/捕获器.png"
+              },
+              "icon": "lucide-image",
+              "title": "捕获器"
+            }
+          },
+          {
+            "id": "a5f191921ddd308d",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/ARP协议.png"
+              },
+              "icon": "lucide-image",
+              "title": "ARP协议"
+            }
+          },
+          {
+            "id": "18d3a12295f8b41e",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/ARP互相应答.png"
+              },
+              "icon": "lucide-image",
+              "title": "ARP互相应答"
+            }
+          },
+          {
+            "id": "6376f0cf7d0232f3",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/我的网卡名称.png"
+              },
+              "icon": "lucide-image",
+              "title": "我的网卡名称"
+            }
+          },
+          {
+            "id": "ebe61a5b1d1fe94b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,77 +68,9 @@
               "icon": "lucide-file",
               "title": "CS144：计算机网络"
             }
-          },
-          {
-            "id": "72f76fc47431db60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/近期计划.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "近期计划"
-            }
-          },
-          {
-            "id": "1710d9a642d71098",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/CS61B 数据结构.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CS61B 数据结构"
-            }
-          },
-          {
-            "id": "3c82ec22eeddde13",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/嵌套查询.png"
-              },
-              "icon": "lucide-image",
-              "title": "嵌套查询"
-            }
-          },
-          {
-            "id": "4a7c9f84f34b7acc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/Go错误处理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Go错误处理"
-            }
-          },
-          {
-            "id": "51a403dc7a889203",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/CMU 15-445 数据库.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CMU 15-445 数据库"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -163,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/CMU 15-445 数据库.md",
+                "file": "我的日记/CS144：计算机网络.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CMU 15-445 数据库 的大纲"
+              "title": "CS144：计算机网络 的大纲"
             }
           },
           {
@@ -258,46 +238,47 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "51a403dc7a889203",
+  "active": "86b4cf62ad685d9f",
   "lastOpenFiles": [
-    "我的日记/Go错误处理.md",
-    "MIT图片存放/嵌套查询.png",
-    "我的日记/开源项目贡献.md",
-    "我的日记/Go面试.md",
-    "我的日记/CMU 15-445 数据库.md",
-    "MIT图片存放/LATERAL 用法.png",
-    "我的日记/面试情景.md",
-    "我的日记/链接本地仓库.md",
+    "MIT图片存放/Pasted image 20250409215317.png",
+    "MIT图片存放/我的网卡名称.png",
+    "MIT图片存放/NAT.png",
+    "我的日记/CS144：计算机网络.md",
+    "MIT图片存放/ARP互相应答.png",
+    "MIT图片存放/捕获器.png",
+    "MIT图片存放/ARP协议.png",
+    "MIT图片存放/抓包分析.png",
     "我的日记/近期计划.md",
-    "我的日记/结构体与接口.md",
-    "我的日记/绘制cpu流水线流程图.md",
-    "我的日记/夯实基础计划.md",
-    "我的日记/对于我迄今迷茫的解答.md",
     "我的日记/对于 页 页框 页表 等名词的理解.md",
-    "我的日记/2025.3.23 周总结.md",
-    "我的日记/6.824 分布式.md",
-    "我的日记/2.25 服务器集群.md",
-    "我的日记/知识点.md",
+    "MIT图片存放/嵌套查询.png",
+    "我的日记/Go错误处理.md",
+    "我的日记/开源项目贡献.md",
+    "我的日记/技术学习.md",
+    "我的日记/夯实基础计划.md",
+    "我的日记/跟据项目来学习知识：.md",
+    "我的日记/对于我迄今迷茫的解答.md",
+    "我的日记/第四个学期.md",
+    "我的日记/单片机知识.md",
+    "计算机/数据库.md",
+    "gsoc计划/postgres 项目.md",
+    "Go_demo/Go-chat-live.md",
+    "Dance_Go/字节.md",
+    "我的日记/csapp 计算机基础.md",
+    "我的日记/Deep seek微服务推荐.md",
+    "我的日记/etcd学习.md",
+    "我的日记/源码建议.md",
+    "我的日记/元数据.md",
+    "我的日记/银行项目优化.md",
     "我的日记/学习新技术.md",
-    "我的日记/下学期任务.md",
     "我的日记/项目.md",
+    "我的日记/下学期任务.md",
     "我的日记/微服务.md",
-    "我的日记/突然觉得看清好多.md",
-    "我的日记/提问的智慧.md",
-    "我的日记/你可以做的事有很多.md",
-    "我的日记/你的灯还亮着吗.md",
-    "我的日记/内化知识的学习方式.md",
+    "MIT图片存放/LATERAL 用法.png",
     "MIT图片存放/EXPLAIN.png",
     "Pasted image 20250407211614.png",
-    "MIT图片存放/内存管理.png",
-    "gsoc计划‘",
-    "MIT图片存放/名言.png",
-    "计算机图片存放/RPC && HTTP.png",
+    "gsoc计划",
     "cmu15445",
     "深入理解GO",
-    "MIT图片存放/kvmmap.png",
-    "MIT图片存放/计算pte.png",
-    "MIT图片存放/gdb调试.png",
     "6.s081笔记/6_s081(2).pdf",
     "6.s081笔记/6_s081.pdf",
     "6.s081笔记",
