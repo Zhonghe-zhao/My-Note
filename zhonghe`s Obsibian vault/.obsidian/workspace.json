@@ -56,7 +56,7 @@
             }
           },
           {
-            "id": "ebe61a5b1d1fe94b",
+            "id": "5534cc676679bd0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -238,12 +238,13 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "86b4cf62ad685d9f",
+  "active": "5534cc676679bd0c",
   "lastOpenFiles": [
-    "MIT图片存放/Pasted image 20250409215317.png",
+    "MIT图片存放/traceout.png",
+    "MIT图片存放/编辑DNS.png",
+    "我的日记/CS144：计算机网络.md",
     "MIT图片存放/我的网卡名称.png",
     "MIT图片存放/NAT.png",
-    "我的日记/CS144：计算机网络.md",
     "MIT图片存放/ARP互相应答.png",
     "MIT图片存放/捕获器.png",
     "MIT图片存放/ARP协议.png",
@@ -274,8 +275,6 @@
     "我的日记/下学期任务.md",
     "我的日记/微服务.md",
     "MIT图片存放/LATERAL 用法.png",
-    "MIT图片存放/EXPLAIN.png",
-    "Pasted image 20250407211614.png",
     "gsoc计划",
     "cmu15445",
     "深入理解GO",
