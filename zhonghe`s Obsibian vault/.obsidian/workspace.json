@@ -8,93 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7c21984711e4d4a2",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/捕获器.png"
-              },
-              "icon": "lucide-image",
-              "title": "捕获器"
-            }
-          },
-          {
-            "id": "a5f191921ddd308d",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/ARP协议.png"
-              },
-              "icon": "lucide-image",
-              "title": "ARP协议"
-            }
-          },
-          {
-            "id": "18d3a12295f8b41e",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/ARP互相应答.png"
-              },
-              "icon": "lucide-image",
-              "title": "ARP互相应答"
-            }
-          },
-          {
-            "id": "6376f0cf7d0232f3",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/我的网卡名称.png"
-              },
-              "icon": "lucide-image",
-              "title": "我的网卡名称"
-            }
-          },
-          {
-            "id": "5534cc676679bd0c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/TLS.png"
-              },
-              "icon": "lucide-image",
-              "title": "TLS"
-            }
-          },
-          {
             "id": "adfcad1e4552839b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/Go与stm32单片机交互.md",
+                "file": "Go_demo/Go-LanBlade.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Go与stm32单片机交互"
-            }
-          },
-          {
-            "id": "dfd7abf9218ffa71",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "MIT图片存放/计算大小端.png"
-              },
-              "icon": "lucide-image",
-              "title": "计算大小端"
+              "title": "Go-LanBlade"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -167,13 +94,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MIT图片存放/计算大小端.png",
+                "file": "Go_demo/Go-LanBlade.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "计算大小端 的大纲"
+              "title": "Go-LanBlade 的大纲"
             }
           },
           {
@@ -262,21 +189,37 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "dfd7abf9218ffa71",
+  "active": "adfcad1e4552839b",
   "lastOpenFiles": [
+    "我的日记/想法创新.md",
+    "Go_demo/Go-LanBlade.md",
+    "CS144课后/lab.md",
+    "未命名",
+    "我的日记/创新.md",
+    "我的日记/面试情景.md",
+    "MIT图片存放/子网掩码.png",
+    "MIT图片存放/前缀匹配.png",
+    "MIT图片存放/Pasted image 20250412092453.png",
+    "7days_golang/Goalng_Framework.md",
+    "大模型/大模型.md",
+    "后端/Web.md",
+    "后端/git.md",
+    "计算机/computer_operate.md",
+    "计算机/computer_network.md",
+    "计算机/数据库.md",
+    "日常图片存放/建议.png",
+    "日常图片存放",
+    "我的日记/近期计划.md",
+    "项目图片/源码.png",
+    "项目图片/use redis with verification email.png",
+    "我的日记/源码建议.md",
     "我的日记/CS144：计算机网络.md",
-    "MIT图片存放/计算大小端.png",
-    "MIT图片存放/字节序.png",
-    "MIT图片存放/TLS.png",
-    "我的日记/Go与stm32单片机交互.md",
-    "MIT图片存放/我的网卡名称.png",
-    "MIT图片存放/traceout.png",
+    "CS144课后",
     "MIT图片存放/编辑DNS.png",
-    "MIT图片存放/NAT.png",
-    "MIT图片存放/ARP互相应答.png",
+    "我的日记/Go与stm32单片机交互.md",
     "MIT图片存放/捕获器.png",
     "MIT图片存放/ARP协议.png",
-    "我的日记/近期计划.md",
+    "MIT图片存放/TLS.png",
     "我的日记/对于 页 页框 页表 等名词的理解.md",
     "我的日记/Go错误处理.md",
     "我的日记/开源项目贡献.md",
@@ -286,19 +229,7 @@
     "我的日记/对于我迄今迷茫的解答.md",
     "我的日记/第四个学期.md",
     "我的日记/单片机知识.md",
-    "计算机/数据库.md",
     "gsoc计划/postgres 项目.md",
-    "Go_demo/Go-chat-live.md",
-    "Dance_Go/字节.md",
-    "我的日记/csapp 计算机基础.md",
-    "我的日记/Deep seek微服务推荐.md",
-    "我的日记/etcd学习.md",
-    "我的日记/源码建议.md",
-    "我的日记/元数据.md",
-    "我的日记/银行项目优化.md",
-    "我的日记/学习新技术.md",
-    "我的日记/项目.md",
-    "我的日记/下学期任务.md",
     "gsoc计划",
     "cmu15445",
     "深入理解GO",
@@ -307,9 +238,6 @@
     "6.s081笔记",
     "计算机/计算机联系.canvas",
     "MIT图片存放",
-    "微服务图片存储",
-    "项目图片",
-    "后端",
     "模电/模电.canvas"
   ]
 }
