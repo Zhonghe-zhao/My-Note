@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go_demo/Go-LanBlade.md",
+                "file": "我的日记/虚拟内存理解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Go-LanBlade"
+              "title": "虚拟内存理解"
             }
           }
         ]
@@ -94,13 +94,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go_demo/Go-LanBlade.md",
+                "file": "我的日记/虚拟内存理解.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Go-LanBlade 的大纲"
+              "title": "虚拟内存理解 的大纲"
             }
           },
           {
@@ -191,8 +191,10 @@
   },
   "active": "adfcad1e4552839b",
   "lastOpenFiles": [
-    "我的日记/想法创新.md",
+    "Go_demo/项目路线.md",
     "Go_demo/Go-LanBlade.md",
+    "leetcode/leet-code.md",
+    "我的日记/想法创新.md",
     "CS144课后/lab.md",
     "未命名",
     "我的日记/创新.md",
@@ -220,7 +222,7 @@
     "MIT图片存放/捕获器.png",
     "MIT图片存放/ARP协议.png",
     "MIT图片存放/TLS.png",
-    "我的日记/对于 页 页框 页表 等名词的理解.md",
+    "我的日记/虚拟内存理解.md",
     "我的日记/Go错误处理.md",
     "我的日记/开源项目贡献.md",
     "我的日记/技术学习.md",
@@ -228,8 +230,6 @@
     "我的日记/跟据项目来学习知识：.md",
     "我的日记/对于我迄今迷茫的解答.md",
     "我的日记/第四个学期.md",
-    "我的日记/单片机知识.md",
-    "gsoc计划/postgres 项目.md",
     "gsoc计划",
     "cmu15445",
     "深入理解GO",
