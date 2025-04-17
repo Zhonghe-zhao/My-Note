@@ -1670,3 +1670,174 @@ func min(a, b int) int {
 改进双指针
 
 
+### 56 合并区间
+
+```go
+func merge(intervals [][]int) [][]int {
+
+    slices.SortFunc(intervals, func(p, q []int) int { return p[0] - q[0] })
+
+    var results [][]int
+
+    results = append(results, intervals[0]) // 先加入第一个区间
+
+    for i := 1 ; i< len(intervals); i ++ {
+
+        curr := intervals[i]
+
+        last := results[len(results) - 1]
+
+        if curr[0] <= last[1] {
+
+            if curr[1] > last[1] {
+
+                last[1] = curr[1]
+
+            } else {
+
+                results = append(results,curr)
+
+            }
+
+        }
+
+    }
+
+    return results
+
+}
+```
+
+
+这是按照我的思路 写出来的 但是最终结果没有通过！ 只通过了14个用例
+
+```go
+func merge(intervals [][]int) [][]int {
+
+    slices.SortFunc(intervals, func(p, q []int) int { return p[0] - q[0] })
+
+    var results [][]int
+
+    results = append(results, intervals[0]) // 先加入第一个区间
+
+    for i := 1 ; i< len(intervals); i ++ {
+
+        curr := intervals[i]
+
+        lastIndex := len(results) - 1
+
+        if curr[0] <= results[lastIndex][1] {
+
+            if curr[1] > results[len(results) - 1][1]{
+
+               results[lastIndex][1] = curr[1]
+
+            } else {
+
+                results = append(results,curr)
+
+            }
+
+        }
+
+    }
+
+    return results
+
+}
+```
+
+
+
+**else 放错位置了！！！！！**
+
+**你对排序算法的理解！ 掌握了几种呢？**
+
+
+## 138 随机链表的复制 
+
+理解深拷贝！
+
+```go
+  
+  
+
+func copyRandomList(head *Node) *Node {
+
+    if head == nil {
+
+        return nil
+
+    }
+
+    for curr := head; curr != nil; {
+
+        newNode := &Node{Val: curr.Val}
+
+        newNode.Next = curr.Next
+
+        curr.Next = newNode
+
+        curr = newNode.Next
+
+}
+
+    for curr := head; curr != nil; curr = curr.Next.Next {
+
+        if curr.Random != nil {
+
+            curr.Next.Random = curr.Random.Next
+
+        }
+
+    }
+
+     newHead := head.Next
+
+    for oldNode, newNode := head, head.Next; oldNode != nil; {
+
+        oldNode.Next = newNode.Next
+
+        if newNode.Next != nil {
+
+            newNode.Next = newNode.Next.Next
+
+        }
+
+         newNode = newNode.Next
+
+         oldNode = oldNode.Next
+
+    }
+
+    return newHead
+
+}
+```
+
+为什么需要 newHead := head.Next 不是有 oldNode, newNode := head,head.Next这个了吗
+
+
+```go
+newHead := head.Next
+
+for oldNode, newNode := head, head.Next; oldNode != nil; {
+
+oldNode.Next = newNode.Next
+
+if newNode.Next != nil {
+
+newNode.Next = newNode.Next.Next
+
+}
+
+oldNode = oldNode.Next
+
+newNode = newNode.Next
+
+}
+
+return newHead
+```
+
+为什么不能返回 newNode呢？？ 为什么会表示newNode未定义
