@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "78a3215db4eb92cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/云端服务器配置.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "云端服务器配置"
-            }
-          },
-          {
             "id": "8dd655f1425eb112",
             "type": "leaf",
             "state": {
@@ -39,14 +25,12 @@
             "id": "78784fb3faf8f38d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "我的日记/CMU 15-445 数据库.md",
-                "mode": "source",
-                "source": false
+                "file": "MIT图片存放/存储.png"
               },
-              "icon": "lucide-file",
-              "title": "CMU 15-445 数据库"
+              "icon": "lucide-image",
+              "title": "存储"
             }
           },
           {
@@ -76,9 +60,35 @@
               "icon": "lucide-file",
               "title": "CS61B 数据结构"
             }
+          },
+          {
+            "id": "9f6f0f9fb211d1a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "leetcode/leet-code.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "leet-code"
+            }
+          },
+          {
+            "id": "6cb66b3f605de87c",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "MIT图片存放/Pasted image 20250421205331.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250421205331"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -151,13 +161,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/CMU 15-445 数据库.md",
+                "file": "MIT图片存放/Pasted image 20250421205331.png",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "CMU 15-445 数据库 的大纲"
+              "title": "Pasted image 20250421205331 的大纲"
             }
           },
           {
@@ -246,24 +256,28 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "78784fb3faf8f38d",
+  "active": "86b4cf62ad685d9f",
   "lastOpenFiles": [
-    "我的日记/CS144：计算机网络.md",
+    "数据上云/Pasted image 20250418131049.png",
+    "我的日记/6.s081.md",
+    "MIT图片存放/Pasted image 20250421205331.png",
+    "leetcode/leet-code.md",
     "我的日记/CS61B 数据结构.md",
     "我的日记/CMU 15-445 数据库.md",
+    "MIT图片存放/ChatGPT Image 2025年4月20日 20_26_55.png",
+    "MIT图片存放/存储.png",
+    "我的日记/CS144：计算机网络.md",
     "我的日记/a.md",
     "我的日记/api与rpc.md",
     "数据上云/笔记.md",
     "我的日记/云端服务器配置.md",
     "大模型/大模型.md",
     "我的日记/示例数据.md",
-    "Pasted image 20250418131049.png",
     "数据上云",
     "我的日记/知识点.md",
     "我的日记/字节青训营.md",
     "我的日记/6.824 分布式.md",
     "我的日记/2.25 服务器集群.md",
-    "我的日记/6.s081.md",
     "我的日记/2025.3.23 周总结.md",
     "我的日记/创新.md",
     "我的日记/跟据项目来学习知识：.md",
@@ -274,8 +288,6 @@
     "我的日记/后端学习路线.md",
     "我的日记/绘制cpu流水线流程图.md",
     "我的日记/技术学习.md",
-    "我的日记/结构体与接口.md",
-    "我的日记/近期计划.md",
     "MIT图片存放/xv6新环境.png",
     "MIT图片存放/子网掩码.png",
     "MIT图片存放/前缀匹配.png",
@@ -283,10 +295,7 @@
     "日常图片存放/建议.png",
     "日常图片存放",
     "项目图片/源码.png",
-    "项目图片/use redis with verification email.png",
     "CS144课后",
-    "MIT图片存放/编辑DNS.png",
-    "MIT图片存放/捕获器.png",
     "gsoc计划",
     "cmu15445",
     "深入理解GO",

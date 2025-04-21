@@ -1841,3 +1841,57 @@ return newHead
 ```
 
 为什么不能返回 newNode呢？？ 为什么会表示newNode未定义
+
+
+
+# 如何设计特定的时间复杂度？
+
+## 158.寻找旋转排序数组中的最小值
+
+你必须设计一个时间复杂度为 `O(log n)` 的算法解决此问题。
+
+
+
+```go
+func findMin(nums []int) int {
+
+    left := 0;
+
+    right := len(nums) - 1
+
+  
+
+    min := nums [right]
+
+    for left < right {    
+
+        mid := left + (right - left) / 2
+
+        if nums[mid] > nums[right] {
+
+        left = mid + 1
+
+    } else {
+
+        right = mid
+
+    }  
+
+    if nums [mid] < min {
+
+        min = nums[mid]
+
+    }
+
+}
+
+    return min
+
+}
+```
+
+
+二分法：
+
+## 33.搜索旋转排序数组
+
