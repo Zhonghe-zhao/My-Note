@@ -1895,3 +1895,91 @@ func findMin(nums []int) int {
 
 ## 33.搜索旋转排序数组
 
+
+
+
+#### 437 路径总和
+
+```go
+/**
+
+ * Definition for a binary tree node.
+
+ * type TreeNode struct {
+
+ *     Val int
+
+ *     Left *TreeNode
+
+ *     Right *TreeNode
+
+ * }
+
+ */
+
+func pathSum(root *TreeNode, targetSum int) int {
+
+    if root == nil {
+
+        return 0
+
+    }
+
+  
+
+    // 计算从当前节点出发的路径数
+
+    result := dfs(root, targetSum)
+
+  
+
+    // 递归左子树和右子树
+
+    result += pathSum(root.Left, targetSum)
+
+    result += pathSum(root.Right, targetSum)
+
+  
+
+    return result
+
+}
+
+  
+
+// 从当前节点出发，计算符合条件的路径数
+
+func dfs(root *TreeNode, targetSum int) int {
+
+    if root == nil {
+
+        return 0
+
+    }
+
+  
+
+    count := 0
+
+    if root.Val == targetSum {
+
+        count = 1
+
+    }
+
+  
+
+    // 递归检查左子树和右子树
+
+    count += dfs(root.Left, targetSum - root.Val)
+
+    count += dfs(root.Right, targetSum - root.Val)
+
+  
+
+    return count
+
+}
+```
+
+
