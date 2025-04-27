@@ -1898,7 +1898,7 @@ func findMin(nums []int) int {
 
 
 
-#### 437 路径总和
+### 437 路径总和
 
 ```go
 /**
@@ -1983,3 +1983,112 @@ func dfs(root *TreeNode, targetSum int) int {
 ```
 
 
+
+
+### 3. 无重复字符的最长字串
+
+
+
+```go
+func lengthOfLongestSubstring(s string) int {
+    left := 0
+    max := 0
+    length := 0;
+    windows := make(map[rune]int)
+
+    for key , letter := range s {
+        windows[letter] ++
+        length ++
+        if windows[letter] > 1 {
+            left ++
+            max = length 
+            length = 0 
+            for letter := range windows {
+                windows[letter] --
+            }
+        }
+        max = length
+}
+    return max - 1
+} 
+```
+
+
+思路一： 根据下标索引
+
+```go
+func lengthOfLongestSubstring(s string) int {
+
+    left := 0
+
+    maxLength := 0
+
+    windows := make(map[rune]int)
+
+  
+
+    for right,letter := range s {
+
+        if pos, exists := windows[letter]; exists && pos >= left {
+
+    left = pos + 1
+
+}
+
+      windows[letter] = right
+
+      currLength := right - left + 1
+
+      if currLength > maxLength {
+
+       maxLength =  currLength
+
+      }
+
+}
+
+   return maxLength
+
+}
+```
+
+
+思路二
+
+根据出现次数
+
+```go
+func lengthOfLongestSubstring(s string) int {
+
+    left := 0
+
+    maxLength := 0
+
+    charCount := make(map[rune]int)
+
+  
+
+    for right, char := range s {
+
+        charCount[char]++
+
+        for charCount[char] > 1 {
+
+            charCount[rune(s[left])]--
+
+            left++                    
+
+        }
+
+        if right - left + 1 > maxLength {
+
+            maxLength = right - left + 1
+
+        }
+
+    }
+
+    return maxLength
+
+}
+```
