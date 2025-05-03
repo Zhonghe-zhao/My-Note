@@ -4,46 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "b6e3dc4fabf4f7e3",
+        "id": "8fccfd5758534535",
         "type": "tabs",
         "children": [
           {
-            "id": "eeb32dd3a73ab01d",
+            "id": "4f4fea06b71975ee",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "Computer Science/图片存放/AIMD算法.png"
+                "file": "图片存放/Go学习图片存放/go的流程.png"
               },
               "icon": "lucide-image",
-              "title": "AIMD算法"
+              "title": "go的流程"
             }
           },
           {
-            "id": "7b8e320bbce3f90b",
+            "id": "7e68b48d2b424d8a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Computer Science/图片存放/拥塞.png"
+                "file": "leetcode/leet-code.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "拥塞"
-            }
-          },
-          {
-            "id": "9a59e42ffaf5b895",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Computer Science/图片存放/拥塞.png"
-              },
-              "icon": "lucide-image",
-              "title": "拥塞"
+              "icon": "lucide-file",
+              "title": "leet-code"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -116,13 +107,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Science/图片存放/AIMD算法.png",
+                "file": "leetcode/leet-code.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "AIMD算法 的大纲"
+              "title": "leet-code 的大纲"
             }
           },
           {
@@ -211,8 +202,18 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "eeb32dd3a73ab01d",
+  "active": "7e68b48d2b424d8a",
   "lastOpenFiles": [
+    "Go/面试每日汇总/Go错误处理.md",
+    "Go/面试每日汇总/Go异步编程.md",
+    "Go/面试每日汇总/数据库.md",
+    "Go/面试每日汇总/2025.4.27.md",
+    "Go/面试每日汇总/面试情景.md",
+    "Go/面试每日汇总/面试常考的点.md",
+    "Go/面试每日汇总/深入理解GMP.md",
+    "图片存放/Go学习图片存放/go的流程.png",
+    "Computer Science/图片存放/拥塞.png",
+    "Computer Science/图片存放/AIMD算法.png",
     "Computer Science/图片存放/滑动窗口：示例.png",
     "Computer Science/图片存放/滑动窗口.png",
     "Computer Science/图片存放/分配：示例2.png",
@@ -220,8 +221,6 @@
     "Computer Science/图片存放/公平分配.png",
     "leetcode/leet-code.md",
     "Computer Science/CS144/CS144：计算机网络.md",
-    "Computer Science/图片存放/AIMD算法.png",
-    "Computer Science/图片存放/拥塞.png",
     "Computer Science/图片存放/页表映射.png",
     "2025-04-27.md",
     "未命名 3.canvas",
@@ -243,14 +242,8 @@
     "我的日记/创新.md",
     "云端配置/示例数据.md",
     "Go/Go_demo/项目路线.md",
-    "Go/面试每日汇总/Go异步编程.md",
     "Go/框架学习",
-    "Go/面试每日汇总/Go错误处理.md",
-    "Go/面试每日汇总/2025.4.27.md",
-    "Go/面试每日汇总/面试常考的点.md",
-    "Go/面试每日汇总/2025.4.26.md",
     "Go/Dance_Go/字节.md",
-    "Go/框架学习/Kratos.md",
     "Computer Science/6.s081/6.s081笔记/6_s081(2).pdf",
     "github",
     "新知识学习",
@@ -258,7 +251,6 @@
     "Go",
     "python相关/大模型/MCP SERVER.png",
     "python相关",
-    "图片存放/Go学习图片存放/抢占调度.png",
     "图片存放",
     "Computer Science/CSAPP",
     "Computer Science/CS61B",

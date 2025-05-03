@@ -2092,3 +2092,86 @@ func lengthOfLongestSubstring(s string) int {
 
 }
 ```
+
+
+
+### 1493 删掉一个元素以后全为1的最长子数组
+
+思路1：以0的个数作为窗口
+
+```go
+func longestSubarray(nums []int) int {
+    left, zeroCount := 0, 0
+    maxLen := 0
+
+    for right := 0; right < len(nums); right++ {
+        if nums[right] == 0 {
+            zeroCount++
+        }
+
+        for zeroCount > 1 {
+            if nums[left] == 0 {
+                zeroCount--
+            }
+            left++
+        }
+
+        maxLen = max(maxLen, right-left)
+    }
+
+    return maxLen
+}
+
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+
+```
+
+我的思路：让两个被隔开的 1 段连接起来
+（但是我没有写出来）
+
+```go
+func longestSubarray(nums []int) int {
+
+    maxLen := 0
+
+    prevOnes := 0
+
+    currOnes := 0
+    
+    zeroSeen := false
+
+    for _, num := range nums {
+
+        if num == 1 {
+
+            currOnes++
+
+        } else {
+
+            // 碰到 0 时，尝试拼接前后 1 段
+
+            maxLen = max(maxLen, prevOnes+currOnes)
+
+            prevOnes = currOnes // 当前段变成“上一段”
+
+            currOnes = 0         // 重置当前段
+
+            zeroSeen = true
+        }
+    }
+
+    // 最后还要比一次（可能最后一段是 1）
+    if zeroSeen {
+        maxLen = max(maxLen, prevOnes+currOnes)
+    } else {
+        // 全是 1 的情况，必须删掉一个
+        maxLen = currOnes - 1
+    }
+        return maxLen
+}
+```
