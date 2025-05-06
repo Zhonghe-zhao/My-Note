@@ -207,7 +207,29 @@ GOMAXPROCS 限定p的个数
 ### 
 
 
-
 ![[go的流程.png]]
 
 
+### M0 G0
+
+调度器的生命周期
+
+启动程序 也就是（启动进程） 编号为0的主线程
+
+![[Pasted image 20250504135857.png]]
+
+
+
+### trace编程
+
+创建trace 启动trace 停止trace
+
+go build 并且运行之后会得到trace.out文件
+
+通过go tool tace 打开trace文件 
+
+`$env:GODEBUG="schedtrace=10000"; .\main.exe`
+
+
+
+ 

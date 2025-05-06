@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8fccfd5758534535",
+        "id": "c4801ccab8c3e24c",
         "type": "tabs",
         "children": [
           {
-            "id": "4f4fea06b71975ee",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "图片存放/Go学习图片存放/go的流程.png"
-              },
-              "icon": "lucide-image",
-              "title": "go的流程"
-            }
-          },
-          {
-            "id": "7e68b48d2b424d8a",
+            "id": "f13939979b1356f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,8 +21,7 @@
               "title": "leet-code"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -202,26 +189,42 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "7e68b48d2b424d8a",
+  "active": "f13939979b1356f1",
   "lastOpenFiles": [
-    "Go/面试每日汇总/Go错误处理.md",
-    "Go/面试每日汇总/Go异步编程.md",
+    "云端配置/数据上云/笔记.md",
+    "云端配置/数据上云/单片机知识.md",
+    "云端配置/数据上云/云.png",
+    "云端配置/数据上云/Go与stm32单片机交互.md",
+    "Go/面试每日汇总/Worker Pool.md",
+    "Go/面试每日汇总/内存逃逸.md",
     "Go/面试每日汇总/数据库.md",
-    "Go/面试每日汇总/2025.4.27.md",
-    "Go/面试每日汇总/面试情景.md",
     "Go/面试每日汇总/面试常考的点.md",
+    "Go/面试每日汇总/面试情景.md",
     "Go/面试每日汇总/深入理解GMP.md",
+    "Go/面试每日汇总/Go调度原理.md",
+    "Go/面试每日汇总/Go异步编程.md",
+    "Go/面试每日汇总/Go错误处理.md",
+    "Computer Science/图片存放/吞吐量推导1.png",
+    "Computer Science/6.s081/6.s081.md",
+    "新知识学习/学习c++高级特性.md",
+    "新知识学习/内核开发.md",
+    "新知识学习/模糊测试.md",
+    "Computer Science/CMU15445/CMU 15-445 数据库.md",
+    "Computer Science/CS144/CS144：计算机网络.md",
+    "Computer Science/6.s081/6.s081笔记/xv6的困惑.md",
+    "Computer Science/6.s081/6.s081笔记/关键代码.md",
+    "Computer Science/6.s081/6.s081笔记/6_s081(2).pdf",
+    "Computer Science/6.s081/6.s081笔记/6_s081.pdf",
+    "Computer Science/图片存放/吞吐量推导2.png",
+    "Computer Science/图片存放/阴影面积.png",
+    "图片存放/Go学习图片存放/Pasted image 20250504135857.png",
+    "Go/面试每日汇总/2025.4.27.md",
+    "leetcode/leet-code.md",
     "图片存放/Go学习图片存放/go的流程.png",
     "Computer Science/图片存放/拥塞.png",
     "Computer Science/图片存放/AIMD算法.png",
     "Computer Science/图片存放/滑动窗口：示例.png",
     "Computer Science/图片存放/滑动窗口.png",
-    "Computer Science/图片存放/分配：示例2.png",
-    "Computer Science/图片存放/分配：示例.png",
-    "Computer Science/图片存放/公平分配.png",
-    "leetcode/leet-code.md",
-    "Computer Science/CS144/CS144：计算机网络.md",
-    "Computer Science/图片存放/页表映射.png",
     "2025-04-27.md",
     "未命名 3.canvas",
     "未命名 2.canvas",
@@ -230,30 +233,14 @@
     "我的日记/简历.md",
     "我的日记/绘制cpu流水线流程图.md",
     "我的日记/元数据.md",
-    "我的日记/Obsidian快捷键.md",
-    "我的日记/etcd学习.md",
-    "我的日记/微服务.md",
-    "Computer Science/6.s081/虚拟地址的疑问.md",
-    "Computer Science/6.s081/虚拟内存理解.md",
-    "每日思考/想法创新.md",
-    "每日思考/提问的智慧.md",
-    "每日思考/思考中的矛盾.md",
-    "我的日记/学习新技术.md",
-    "我的日记/创新.md",
-    "云端配置/示例数据.md",
-    "Go/Go_demo/项目路线.md",
     "Go/框架学习",
-    "Go/Dance_Go/字节.md",
-    "Computer Science/6.s081/6.s081笔记/6_s081(2).pdf",
     "github",
     "新知识学习",
     "云端配置",
     "Go",
-    "python相关/大模型/MCP SERVER.png",
     "python相关",
     "图片存放",
     "Computer Science/CSAPP",
-    "Computer Science/CS61B",
     "Computer Science/早期计算机学习/计算机联系.canvas",
     "模电/模电.canvas"
   ]
