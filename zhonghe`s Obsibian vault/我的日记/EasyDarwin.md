@@ -6,7 +6,8 @@
 
 首先make build/windows出现错误
 
-![[Pasted image 20250518170245.png]]
+![error](../图片存放/EasyDarwin/Pasted image 20250518170245)
+
 
 
 项目中提供了一个 `GetBuildTime()` 函数，会解析 `buildTimeAt` 为时间戳，作为构建时间展示。
