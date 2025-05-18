@@ -6,7 +6,7 @@
 
 首先make build/windows出现错误
 
-![error](../图片存放/EasyDarwin/Pasted image 20250518170245.png)
+![error](./图片存放/EasyDarwin/Pasted image 20250518170245.png)
 
 
 
