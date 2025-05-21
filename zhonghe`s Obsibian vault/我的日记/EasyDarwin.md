@@ -6,7 +6,7 @@
 
 首先make build/windows出现错误
 
-![[Pasted image 20250518170245.png]]
+![error](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518170245.png)
 
 
 项目中提供了一个 `GetBuildTime()` 函数，会解析 `buildTimeAt` 为时间戳，作为构建时间展示。
@@ -41,21 +41,20 @@ CGO 模式!  我进行了注释处理！
 
 编译成功！
 
-![[Pasted image 20250518185803.png]]
+![succeed](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518185803.png)
 
 
 
 
 ## Getting Started Guide
 
-
-![[Pasted image 20250518190201.png]]
+![3](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518190201.png)
 
 
 安装 FFmpeg 打开EasyDarwin
 
 
-![[Pasted image 20250518192950.png]]
+![4](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518192950.png)
 
 
 ## 创建推流
@@ -71,18 +70,16 @@ CGO 模式!  我进行了注释处理！
 `ffmpeg -re -i ./oceans.mp4 -c copy -f flv -y rtmp://localhost:21935/live/stream_1?sign=ulSFVQGoTU
 
 
-![[Pasted image 20250518193850.png]]
+![5](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518193850.png)
 
 
-
-![[Pasted image 20250518194415.png]]
+![6](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518194415.png)
 
 
 推流成功
 
 ## 拉流
 
-
-![[Pasted image 20250518194859.png]]
+![7](https://github.com/Zhonghe-zhao/My-Note/blob/main/zhonghe%60s%20Obsibian%20vault/%E5%9B%BE%E7%89%87%E5%AD%98%E6%94%BE/EasyDarwin/Pasted%20image%2020250518194859.png)
 
 
