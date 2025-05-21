@@ -24,75 +24,33 @@
             }
           },
           {
-            "id": "4804d459f5c57ed4",
+            "id": "11d683620e8e2c94",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "图片存放/项目图片/token使用.png"
+                "file": "图片存放/日常图片存放/CSP示例.png"
               },
               "icon": "lucide-image",
-              "title": "token使用"
+              "title": "CSP示例"
             }
           },
           {
-            "id": "a02d86439ea425c8",
+            "id": "db27f7d000beee41",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "我的日记/成为后端大师！.md",
+                "file": "reddit/reddit提问.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "成为后端大师！"
-            }
-          },
-          {
-            "id": "edfa0dbbb75e1dbe",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "图片存放/项目图片/授权规则.png"
-              },
-              "icon": "lucide-image",
-              "title": "授权规则"
-            }
-          },
-          {
-            "id": "cec98ea8d1d36045",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/简历.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "简历"
-            }
-          },
-          {
-            "id": "ed28d45c758474b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "我的日记/EasyDarwin.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "EasyDarwin"
+              "title": "reddit提问"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -165,13 +123,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "我的日记/EasyDarwin.md",
+                "file": "reddit/reddit提问.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "EasyDarwin 的大纲"
+              "title": "reddit提问 的大纲"
             }
           },
           {
@@ -261,45 +219,48 @@
       "juggl:Juggl global graph": false
     }
   },
-  "active": "ed28d45c758474b7",
+  "active": "db27f7d000beee41",
   "lastOpenFiles": [
-    "图片存放/EasyDarwin",
-    "图片存放/未命名.md",
-    "我的日记/EasyDarwin.md",
-    "图片存放/EasyDarwin/Pasted image 20250518194859.png",
-    "图片存放/EasyDarwin/Pasted image 20250518194415.png",
-    "图片存放/EasyDarwin/Pasted image 20250518193850.png",
-    "图片存放/EasyDarwin/Pasted image 20250518192950.png",
+    "Go/Go_demo/复盘项目.md",
+    "图片存放/日常图片存放/CSP示例.png",
+    "reddit/reddit提问.md",
+    "我的日记/第一次reddit提问！.md",
+    "图片存放/日常图片存放/回答1.png",
+    "reddit",
+    "图片存放/日常图片存放/回答2.png",
+    "Rust/熟悉rust.md",
+    "Pasted image 20250521192114.png",
+    "Pasted image 20250521192104.png",
+    "我的日记/引用和指针不等价吗.md",
+    "Go/基础驱动学习/调度器.md",
+    "Rust",
+    "疑惑询问/内化知识的学习方式.md",
+    "Go/基础驱动学习",
+    "Go/未命名.md",
+    "疑惑询问/利用GPT.md",
+    "Computer Science/CMU15445/CMU 15-445 数据库.md",
+    "Computer Science/CMU15445/15445课后/project0.md",
+    "Computer Science/6.s081/6.s081.md",
+    "图片存放/EasyDarwin/Pasted image 20250518170245.png",
     "图片存放/EasyDarwin/Pasted image 20250518190201.png",
     "图片存放/EasyDarwin/Pasted image 20250518185803.png",
-    "图片存放/EasyDarwin/Pasted image 20250518170245.png",
-    "Go/Go_demo/复盘项目.md",
+    "我的日记/EasyDarwin.md",
+    "图片存放/EasyDarwin",
+    "图片存放/EasyDarwin/Pasted image 20250518194859.png",
+    "图片存放/EasyDarwin/Pasted image 20250518194415.png",
     "我的日记/简历.md",
-    "Computer Science/6.s081/6.s081.md",
     "我的日记/授权认证注意事项.md",
-    "图片存放/项目图片/授权规则.png",
-    "图片存放/项目图片/token使用.png",
     "我的日记/成为后端大师！.md",
     "我的日记/理解token.md",
     "Go/Go_demo/银行项目优化.md",
     "Go/Go_demo/Simple_bank.md",
     "疑惑询问/Deep seek微服务推荐.md",
     "疑惑询问/突然觉得看清好多.md",
-    "疑惑询问/利用GPT.md",
     "疑惑询问/建议.md",
     "疑惑询问/后端学习路线.md",
     "疑惑询问/反思.md",
     "Go/Go_demo/未命名.md",
-    "我的日记/gin学习.md",
-    "Go/面试每日汇总/数据库.md",
-    "Go/面试每日汇总/面试.md",
-    "Computer Science/Backend/TCP与WebSocket的区别.md",
     "Computer Science/Backend",
-    "Computer Science/未命名.md",
-    "Go/面试每日汇总/面试常考的点.md",
-    "Go/面试每日汇总/深入理解GMP.md",
-    "Go/面试每日汇总/面试情景.md",
-    "图片存放/Go学习图片存放/项目架构.png",
     "Computer Science/6.s081/6.s081笔记/6_s081(2).pdf",
     "Computer Science/6.s081/6.s081笔记/6_s081.pdf",
     "未命名 3.canvas",
@@ -309,10 +270,6 @@
     "Go/框架学习",
     "github",
     "新知识学习",
-    "云端配置",
-    "Go",
-    "python相关",
-    "图片存放",
     "Computer Science/早期计算机学习/计算机联系.canvas",
     "模电/模电.canvas"
   ]
