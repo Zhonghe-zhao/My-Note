@@ -38,6 +38,7 @@
           {
             "id": "db27f7d000beee41",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -45,6 +46,7 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "reddit提问"
             }
@@ -221,9 +223,10 @@
   },
   "active": "db27f7d000beee41",
   "lastOpenFiles": [
-    "Go/Go_demo/复盘项目.md",
+    "我的日记/对于矛盾的理解.md",
     "图片存放/日常图片存放/CSP示例.png",
     "reddit/reddit提问.md",
+    "Go/Go_demo/复盘项目.md",
     "我的日记/第一次reddit提问！.md",
     "图片存放/日常图片存放/回答1.png",
     "reddit",
@@ -259,7 +262,6 @@
     "疑惑询问/建议.md",
     "疑惑询问/后端学习路线.md",
     "疑惑询问/反思.md",
-    "Go/Go_demo/未命名.md",
     "Computer Science/Backend",
     "Computer Science/6.s081/6.s081笔记/6_s081(2).pdf",
     "Computer Science/6.s081/6.s081笔记/6_s081.pdf",

@@ -151,12 +151,47 @@ IPC（Inter-Process Communication，进程间通信）是一种机制，允许�
 
 ### CSP的优劣势
 
+原则： 如果违反 CSP 原则，**通过 Channel 间接共享内存**，仍需要锁：
+
+```go
+type Data struct{ X int }
+func main() {
+    ch := make(chan *Data)
+    d := &Data{X: 1}
+    go func() { ch <- d }() // 发送指针
+    go func() { d.X++ }()   // 竞态！违背 CSP
+}
+```
+
+channel 不是万能保险，传的是引用时就要小心。
+
+
 社区回答！
 
 ~~~
 There are cases where CSP produces better performance and cases where the performance is worse. On the one hand, for code that does a lot of small multithreaded operations (like incrementing integers etc), converting all operations to happen via channels is going to be much less performant because channels involve more work per operation. On the other hand, the fact that memory isn't concurrently shared means that you can write faster single threaded code because you don't need to worry about mutexes and barriers etc for objects received from channels.
 
 ~~~
+
+
+[同步方法测试](https://go-benchmarks.com/synchronization-methods)
+
+[一篇帖子的说明](https://www.jtolio.com/2016/03/go-channels-are-bad-and-you-should-feel-bad/)
+
+
+
+*作者的吐槽点* ： “- **channel 适合某些场景**（如任务队列、事件通知、流水线模式）。
+    
+- **mutex 适合另一些场景**（如保护共享状态、简单临界区）。
+    
+- **"channel of channels" 确实可能增加复杂度**，但 Go 的 select + channel 机制也能提供强大的并发控制能力。”
+
+
+“作者的观点是 **"不要为了用 channel 而用 channel"**，应该根据实际情况选择最合适的同步机制（mutex 或 channel），而不是盲目遵循 Go 的 "share memory by communicating" 哲学。”
+
+
+
+[一篇论文](https://songlh.github.io/paper/go-study.pdf)
 
 
 #### 一、CSP 的劣势场景（性能差）：
@@ -219,7 +254,7 @@ Go 的 `channel` 底层确实是用**共享内存 + 加锁**实现的：
 
  那为什么说 “你写的代码没锁” 性能反而更好？
 
-#### ✅ **关键是“封装” 和 “并发域最小化”**：
+#### **关键是“封装” 和 “并发域最小化”**：
 
 > channel 把“并发边界”控制在接口级别，而不是让你每个字段自己去加锁。
 
@@ -243,8 +278,306 @@ Go 的 `channel` 底层确实是用**共享内存 + 加锁**实现的：
 ### **Plan 9 from Bell Labs**
 
 
+
+```go
+The OS itself also avoids sharing memory, and of course there are "channels" for communicating: file descriptors, which can be devices, pipes, network connections, etc. Like in Unix. But it goes beyond what traditional Unix does, because many userspace applications are file servers that provide a file descriptor that can be mounted onto the file system, and provide more such file descriptors, etc. It's a very simple but powerful system.
+```
+
+ plan9操作系统避免了共享内存, 那内部是什么样的呢 进程之间如何通信呢
+ 
+
 在Go SDK中 runtime包中含又 plan9的身影！
+
+Plan 9 **避免传统的共享内存和多线程同步机制**，鼓励进程之间用“文件通信”（如命名管道、9P 协议）：
+
+- 类似 Go 的 Channel，但用的是文件协议。
+    
+- 所有通信都可序列化，可远程传输。
+
+> 难道操作文件就不是操作同一块内存了吗？
+
+
+示例：
+
+共享内存
+```go
+int *shared = mmap(...);  // 多个进程访问这个地址
+*shared = 42;             // 谁都能读写这块内存
+```
+
+文件通信
+```
+echo 42 > /srv/somefile     # 写入
+cat /srv/somefile           # 另一个程序读
+```
+
+
+虽然最终数据可能写入页缓存或磁盘（确实会进内存），但你**无法直接访问或共享那块内存**，只能通过：
+
+- 系统调用（read/write）
+    
+- Channel 抽象（Go）
+    
+- 文件协议（Plan 9）
+
+#### 疑问：
+
+1. 那xv6系统的内存的关于 前面所说的CSP理论和共享内存，xv6是偏向与什么？ 或者说linux系统都沿用了文件通信？
+
+> xv6 和 Linux 都以“共享内存 + 文件通信”为基础，核心机制是“共享内存 + 加锁”，而不是 CSP 模型。
+
+2. 所以说文件通信和CSP之间的关系是什么？ 有联系吗 为什么前面你跟我说Plan 9 设计就是避免共享内存，强调文件通信 + 用户态协议 那既然文件通信是避免共享内存，那为什么不能说xv6等liunx操作系统不是CSP模型呢
+
+> 文件通信是一种实现机制，CSP 是一种并发模型。Plan 9 把文件通信机制用于实现类似 CSP 的并发风格；而 Linux 虽然也有文件通信，但仍然基于共享内存 + 锁，不符合 CSP 的并发语义。
+
+
+|特性|Linux/xv6|CSP (Plan 9 风格)|
+|---|---|---|
+|默认通信方式|共享内存 + 锁|Channel / 消息|
+|文件通信|有，但不普遍用作并发通信|核心机制|
+|并发语义|多线程共享状态|顺序过程 + 通信|
+|并发控制|mutex、atomic、lock|通信即同步|
+|数据一致性|程序员手动维护|通信机制保证|
+
+Plan 9 并没有在商业或主流社区中广泛流行，但它对**现代操作系统的设计理念影响深远**。许多重要思想被吸收进 Linux、Go 语言、Docker 等系统中。
+
+
+
+
+##  mkfifo is OS's channel
+
+- `mkfifo` 是一个 Linux 系统调用（命令），用于**创建一个命名管道（FIFO）**。
+    
+- FIFO = First In, First Out，像文件一样存在于磁盘，但其实是一种特殊的**IPC（进程间通信）**手段。
+    
+- 创建后，多个进程可以通过读写这个“文件”来通信。
+
+
+|Go 的 `chan`|OS 的 `mkfifo`|
+|---|---|
+|语言级通道，只在 Go 中使用|系统级别，多个进程/语言可用|
+|内存中的结构，速度快|磁盘上的文件，效率低，但能跨进程|
+|用于 goroutine 间通信|用于进程间通信（IPC）|
+|类型安全、阻塞/非阻塞控制强|只能读字节流，无结构化信|
 
 
 ## 线程池
+
+
+
+##  **批评 Go 语言在错误处理和一些特殊语法上的不一致性**
+
+
+[另一篇](https://bravenewgeek.com/go-is-unapologetically-flawed-heres-why-we-use-it/)
+
+~~~
+There are other peculiar idiosyncrasies. Error handling is generally done by returning error values. This is fine, and I can certainly see the motivation coming from the abomination of C++ exceptions, but there are cases where Go doesn’t follow its own rule. For example, map lookups return two values: the value itself (or zero-value/nil if it doesn’t exist) and a boolean indicating if the key was in the map. Interestingly, we can choose to ignore the boolean value altogether—a syntax reserved for certain blessed types in the standard library. Type assertions and channel receives have equally curious behavior.
+~~~
+
+
+```go
+file, err := os.Open("foo.txt")
+if err != nil {
+    return err
+}
+```
+
+- 这是 Go 的核心设计哲学之一：**强制程序员显式处理错误**，避免像 C++ 异常（exceptions）那样隐式传播。
+
+```go
+value, exists := myMap["key"]  // 返回值和布尔值
+value = myMap["key"]           // 可以忽略布尔值，直接取值
+```
+
+- 但 Go 允许 **直接忽略布尔值**，这种语法是 **标准库的 "特权"**（"blessed types"），普通函数无法实现类似行为。
+    
+- 这违背了 Go 的 "显式处理" 原则。
+
+
+```go
+str, ok := x.(string)  // 安全写法，返回 (value, bool)
+str = x.(string)       // 如果失败，直接 panic（类似异常）
+```
+
+
+- 第一种形式（返回 `bool`）符合 Go 的错误处理风格。
+    
+- 第二种形式（直接 `panic`）却 **退回到了异常机制**，与 Go 的哲学矛盾。
+
+
+```go
+val, ok := <-ch  // 如果 channel 关闭，ok 为 false
+val = <-ch       // 如果 channel 关闭，返回零值（无警告）
+```
+
+
+- 第一种形式可以检测 channel 是否关闭。
+    
+- 第二种形式 **静默接受零值**，可能导致隐蔽的 bug。
+
+
+
+- ***对开发者的启示：***
+    
+    - ***需要警惕这些 "语法糖" 可能隐藏的问题。***
+        
+    - ***在关键代码中，始终使用完整形式（如 `val, ok := m[key]`）以避免 bug。***
+
+
+## 理解异常和错误
+
+1. 错误（`error`）——正常业务流程中的问题
+
+本质：
+
+- 是一种**值**（`error` 接口类型），代表函数运行时出现的问题。
+    
+- **你需要主动检查和处理**。
+
+
+2. 异常（`panic`）——非正常流程，程序直接崩溃
+
+本质：
+
+- 是 Go 用来表示**程序出现严重问题时**的机制。
+    
+- 一旦 `panic` 被调用，当前函数就会停止执行，**逐层向上退出栈帧**，直到程序崩溃或被 `recover` 捕获
+
+常用于：
+
+- 数组越界
+    
+- nil 指针调用
+    
+- 程序员写错逻辑时提示开发者修复
+
+
+
+>**错误（error）是业务可恢复的问题，异常（panic）是不可恢复、必须终止或特殊处理的问题。**  
+在实际开发中，**90% 的问题都用 error 返回，不要滥用 panic**
+
+
+Go 的理念之一是“通过交流分享记忆;不要通过共享内存来交流。这是标准库似乎经常打破的另一个规则。标准库中大约有 60 个通道，不包括测试。如果您浏览代码，您会发现互斥锁往往是首选，并且通常性能更好 — 稍后将对此进行详细介绍。
+
+
+## sync/atomic
+
+~~~
+We want sync to be clearly documented and used when appropriate. We generally don’t want sync/atomic to be used at all…Experience has shown us again and again that very very few people are capable of writing correct code that uses atomic operations…If we had thought of internal packages when we added the sync/atomic package, perhaps we would have used that. Now we can’t remove the package because of the Go 1 guarantee.
+~~~
+
+1. **`sync` 包的定位**：
+    
+    - `sync` 包（如 `sync.Mutex`、`sync.WaitGroup`）是 **官方推荐** 的同步原语，应该被 **清晰地文档化** 并在合适的场景使用。
+        
+    - 这些高阶同步工具（如互斥锁、条件变量）已经封装了底层复杂性，普通开发者可以安全使用。
+        
+2. **`sync/atomic` 包的定位**：
+    
+    - `sync/atomic`（提供原子操作，如 `atomic.AddInt32`）**本应设计为内部包**（`internal`），因为它的正确使用需要极深的并发编程经验。
+        
+    - 绝大多数开发者 **无法写出正确的原子操作代码**（即使是有经验的程序员也容易犯错）。
+        
+    - 但由于历史原因（Go 1 兼容性承诺），现在无法移除或隐藏该包。
+
+
+- ***Go 团队认为 原子操作是危险的，应该尽量避免使用，除非在极少数底层库（如运行时、标准库内部）中。***
+    
+- ***普通业务代码应优先使用 `sync` 包提供的更安全的抽象（如 `Mutex`），而非直接操作 `atomic`。***
+
+
+*WHY？？？*
+
+
+- 原子操作的正确性依赖于 **内存模型**（memory model）和 **CPU 指令顺序**（memory ordering）。
+    
+- 开发者需要理解 **可见性**（visibility）、**重排序**（reordering）、**ABA 问题** 等复杂概念，否则极易写出有 bug 的代码。
+
+
+- 基于原子操作的代码通常难以阅读和调试（例如无锁数据结构）。
+    
+- 团队协作时，其他成员可能无法理解其背后的并发逻辑。
+
+
+~~~
+ Go 团队的历史决策反思
+1. `internal` 包的缺失：
+
+    - Go 早期没有 `internal` 包机制（限制某些包仅限标准库内部使用）。
+        
+    - 如果当时有，`sync/atomic` 可能会被标记为 `internal`，避免外部开发者误用。
+        
+2. Go 1 兼容性承诺：
+    
+    - Go 1 版本承诺不破坏向后兼容性，因此即使现在认识到 `atomic` 的问题，也无法移除或降级该包。
+~~~
+
+
+~~~
+Clearly, channels are not particularly great for workload throughput, and you’re typically better off using a lock-free ring buffer or even a synchronized queue. Channels as a unit of composition tend to [fall short](https://gist.github.com/kachayev/21e7fe149bc5ae0bd878) as well. Instead, they are better suited as a coordination pattern, a mechanism for signaling and timing-related code. Ultimately, you must use channels judiciously if you are sensitive to performance.
+~~~
+
+
+
+### 原子操作和锁的区别
+
+|特性|原子操作（`atomic`）|锁（`Mutex`）|
+|---|---|---|
+|**底层机制**|直接使用 CPU 原子指令（如 `CAS`、`LL/SC`）|基于操作系统调度（如 `futex`）|
+|**粒度**|单变量级别（如 `int32`、`pointer`）|代码块级别（保护一段逻辑）|
+|**是否阻塞**|非阻塞（硬件级原子操作，无上下文切换）|阻塞（竞争失败时，线程会休眠）|
+|**适用场景**|简单变量操作（计数器、标志位）|复杂逻辑（需保护多个变量或代码段）|
+|**性能**|极高（无锁，无线程切换）|较低（锁竞争时有上下文切换开销）|
+|**正确性难度**|高（需理解内存模型，易写出 bug）|低（直接加锁，逻辑清晰）|
+
+
+
+## 共享内存和CSP
+
+共享内存去并发，和csp理论去并发 为什么会有很大的差别，为什么csp貌似是对并发更好的模型
+
+**共享内存并发强调“状态共享”，而 CSP 并发强调“消息传递”**。  
+**CSP 更容易构建正确、安全、可组合的并发程序。**
+
+|方面|共享内存 (Shared Memory)|CSP（通信顺序进程）|
+|---|---|---|
+|本质|多个线程访问同一内存变量|多个进程通过通道通信|
+|协作方式|读写共享变量 + 加锁|发送消息 + 阻塞等待|
+|错误风险|数据竞争，死锁，难调试|更可控，天然同步|
+|例子|C/C++ 中的线程 + mutex|Go 中的 goroutine + channel|
+
+
+*共享内存的问题！*
+
+- **可见性问题**：一个线程修改变量，另一个线程可能看不到（CPU 缓存、编译器优化等）
+    
+- **竞争条件（Race Condition）**：线程读写冲突导致不一致
+    
+- **加锁非常脆弱**：容易忘记加锁、锁顺序死锁、性能差、调试困难
+    
+- **状态耦合**：多个线程对共享数据的意图难以区分
+
+
+*CSP 把“并发的核心问题”转化了：*
+
+-  **从“如何共享变量”转为“如何传递消息”**
+    
+-  **通道通信是同步的，相当于自带锁机制**
+    
+- **goroutine 是轻量级的，天然适合大规模并发**
+
+
+**CSP 不是性能最强的模型，但**：
+
+- 对“人类开发者”更友好；
+    
+- 对复杂系统的“构建和演化”更稳定；
+    
+- 也是构建现代高并发系统时的**主流模型之一**。
+
+
+
+***！！！ 你不是去“抢”变量，而是“请求”那个管理它的 goroutine 来操作它。***
+
+
 
