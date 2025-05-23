@@ -581,3 +581,186 @@ Clearly, channels are not particularly great for workload throughput, and you’
 
 
 
+## Plan9 & Go
+
+### 设计思想的关联
+
+|Plan 9 的设计思想|Go 中的体现|说明|
+|---|---|---|
+|**一切皆文件**（包括网络、图形等）|`io.Reader` / `io.Writer` 接口统一抽象|所有输入输出都被看作流（stream），统一接口风格|
+|**简洁统一的接口设计**|接口设计简洁、不需显式实现，强调组合|`interface` 不需要 `implements`，鼓励面向抽象编程|
+|**资源命名空间 per process**|每个 `goroutine` 轻量、可独立使用 channel|更细粒度的资源隔离感，goroutine 独立如 namespace|
+|**9P 协议：分布式资源像本地一样访问**|Go 的网络库设计抽象化（如 `net.Conn`）|可以轻松写出“远程等于本地”的通信程序|
+|**并发不是线程，是消息通信（管道）**|`goroutine` + `channel` 是核心特性|正是 CSP 模型（通讯顺序进程），而非线程锁死等待|
+|**最小化系统复杂性**|Go 排除继承、多重继承、异常机制|简单就是力量，避免复杂性带来的维护成本|
+|**自举系统（compiler/runtime 用自己写）**|Go 的工具链也是用 Go 写的（包括编译器、fmt 工具等）|自洽、可控、统一体验|
+
+从plan9中吸收的内容
+
+- **组合优于继承**：Plan 9 没有传统面向对象；Go 同样用接口 + 组合结构体替代类继承；
+    
+- **消息通信代替共享内存**：Plan 9 提倡“不要共享内存”；Go 鼓励用 channel 通信而非锁；
+    
+- **极简内核**：Plan 9 内核极简但灵活；Go 工具链同样追求“一个命令搞定”的体验；
+    
+- **统一接口抽象**：Plan 9 的资源访问统一为文件；Go 将几乎所有资源抽象成 `io.Reader`/`Writer`。
+
+
+
+Plan 9 的几个核心哲学在 Go 中的体现
+
+---
+
+### 1. **一切皆文件 / io.Reader + io.Writer 抽象**
+
+```go
+package main
+
+import (
+	"fmt"
+	"io"
+	"os"
+	"strings"
+)
+
+func main() {
+	var r io.Reader = strings.NewReader("Hello Plan 9!")
+	io.Copy(os.Stdout, r) // 输出到标准输出：Hello Plan 9!
+}
+```
+
+> 无论是文件、字符串、网络连接，只要实现 `Reader` 接口，就能互换使用。
+
+---
+
+### 2. **组合优于继承**
+
+```go
+type Logger struct{}
+
+func (l Logger) Log(msg string) {
+	println("[LOG]", msg)
+}
+
+type Service struct {
+	Logger // 嵌入，而非继承
+}
+
+func main() {
+	s := Service{}
+	s.Log("Service started") // 调用嵌入字段的方法
+}
+```
+
+> Go 不用继承，通过结构体组合来共享行为。
+
+
+#### 组合优于继承” 为什么在 Go 中是正确的？
+
+```go
+type Logger struct{}
+func (l Logger) Log(msg string) { fmt.Println("[LOG]", msg) }
+
+type Service struct {
+	Logger // 组合，而不是继承
+}
+```
+
+
+继承带来耦合，组合带来解耦
+
+- 灵活：只组合需要的行为
+    
+- 解耦：Logger 改变不影响 Service
+    
+- 模块化更强，符合现代微服务理念
+
+
+
+
+
+---
+
+### 3. **CSP 并发模型（goroutine + channel）**
+
+```go
+func worker(ch chan string) {
+	for msg := range ch {
+		println("received:", msg)
+	}
+}
+
+func main() {
+	ch := make(chan string)
+	go worker(ch)
+
+	ch <- "task 1"
+	ch <- "task 2"
+	close(ch)
+}
+```
+
+> goroutine 类似 Plan 9 的 lightweight process，channel 是通信通道，避免共享内存。
+
+---
+
+### 4. **资源按命名空间抽象（net.Conn 抽象）**
+
+```go
+package main
+
+import (
+	"fmt"
+	"net"
+)
+
+func main() {
+	conn, _ := net.Dial("tcp", "example.com:80")
+	fmt.Fprintf(conn, "GET / HTTP/1.0\r\n\r\n")
+	buf := make([]byte, 4096)
+	n, _ := conn.Read(buf)
+	fmt.Println(string(buf[:n]))
+}
+```
+
+> `net.Conn` 可以代表 TCP、Unix socket 等，是统一的“文件风格”资源访问。
+
+---
+
+### 5. **自举 + 最小工具链：Go 编译器/工具就是用 Go 写的**
+
+```bash
+go build main.go
+go fmt main.go
+go run main.go
+```
+
+> 没有 `make`，不需要配置，直接编译运行，体现极简主义。
+
+---
+
+### 总结
+
+Go 语言很多地方直接体现了 Plan 9 的理念，尤其是：
+
+- **接口驱动的抽象**：`io.Reader` / `net.Conn`
+    
+- **并发设计**：channel 通信优先于加锁
+    
+- **结构体组合**：轻松构造可复用模块
+    
+- **极简工具链**：从构建到部署尽可能统一
+
+
+
+## 系统资料
+
+[Articles](https://lwn.net/Articles/250967/)
+
+
+[Go 谚语](https://go-proverbs.github.io/)
+
+
+[Go语言设计与实现](https://draven.co/golang/)
+
+[技术博客](https://luminousmen.com/)
